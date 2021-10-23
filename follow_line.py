@@ -1,6 +1,6 @@
 # LEGO type:standard slot:3 autostart
 
-from spike import ColorSensor, MotorPair, Motor, Motor
+from spike import ColorSensor, MotorPair, Motor
 
 color = ColorSensor('A')
 wheels = MotorPair('F', 'B')
