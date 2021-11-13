@@ -16,7 +16,7 @@ wheels.set_motor_rotation(8.8 * math.pi, 'cm')
 wheels.move(25.5, 'in', steering=0, speed=30)
 
 # use top attatchment to bring down the cargo in the plane
-updown.run_for_rotations(0.65)
+updown.run_for_rotations(0.70)
 
 # move back
 wheels.move(-1.9, 'in', steering=0, speed=50)
@@ -28,7 +28,7 @@ updown.run_for_rotations(-0.75)
 sideside.run_for_rotations(-0.50)
 
 # move forward
-wheels.move(1, 'in', steering=0, speed=50)
+wheels.move(1.1, 'in', steering=0, speed=50)
 
 # move wall down
 updown.run_for_rotations(0.65, speed= 100)
@@ -38,3 +38,4 @@ wheels.move(1.5, 'in', steering=0, speed=50)
 
 # return to home and take toolbox with
 wheels.move(-25, 'in', steering=0, speed=50)
+
