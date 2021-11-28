@@ -13,7 +13,7 @@ timer = Timer()
 wheels.set_motor_rotation(8.8 * math.pi, 'cm')
 
 # move foward
-wheels.move(25.5, 'in', steering=0, speed=30)
+wheels.move(26.3, 'in', steering=0, speed=30)
 
 # use top attatchment to bring down the cargo in the plane
 updown.run_for_rotations(0.70)
@@ -23,9 +23,6 @@ wheels.move(-1.9, 'in', steering=0, speed=50)
 
 # move wall up
 updown.run_for_rotations(-0.75)
-
-# move top attachment to the side
-sideside.run_for_rotations(-0.50)
 
 # move forward
 wheels.move(1.1, 'in', steering=0, speed=50)
@@ -38,4 +35,3 @@ wheels.move(1.5, 'in', steering=0, speed=50)
 
 # return to home and take toolbox with
 wheels.move(-25, 'in', steering=0, speed=50)
-
