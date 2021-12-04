@@ -31,7 +31,11 @@ wheels.move(1.1, 'in', steering=0, speed=50)
 updown.run_for_rotations(0.65, speed= 100)
 
 # move forward
-wheels.move(1.5, 'in', steering=0, speed=50)
+count = 0
+while (count < 3):
+    count = count + 1
+    wheels.move(1.5, 'in', steering=0, speed=50)
+    wheels.move(-1.5, 'in', steering=0, speed=50)
 
 # return to home and take toolbox with
-wheels.move(-25, 'in', steering=0, speed=50)
+wheels.move(-30, 'in', steering=0, speed=50)

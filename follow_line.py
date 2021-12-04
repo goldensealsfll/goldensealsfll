@@ -13,9 +13,9 @@ timer = Timer()
 
 def followLine(wheels, color, power):
     if color.get_color() == 'black':
-        wheels.start_tank( trunc(power * 0 / 3), power)
+        wheels.start_tank(trunc(power * 3 / 3), power)
     else:
-        wheels.start_tank(power, trunc(power * 0 / 3))
+        wheels.start_tank(power, trunc(power * 0 / 0))
     
 while True:
     followLine(wheels, color, 40)
