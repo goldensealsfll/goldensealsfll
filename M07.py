@@ -5,15 +5,20 @@ from spike.control import Timer, wait_for_seconds
 import math
 
 hub = PrimeHub()
-color = ColorSensor('A')
 wheels = MotorPair('F', 'B')
 updown = Motor('C')
 sideside = Motor('E')
-timer = Timer(
+timer = Timer
 wheels.set_motor_rotation(8.8 * math.pi, 'cm')
 
-# Move to ship deck
-wheels.move(42.87, 'in', steering=0, speed=75)
+# start
 
-# turn right
-wheels.move_tank(65,unit='degrees', left_speed=75, right_speed=None)
+
+# move foward 
+wheels.move(18.5, 'in', steering=55, speed=55)
+
+
+
+
+# move back
+
