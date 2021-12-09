@@ -11,14 +11,20 @@ sideside = Motor('E')
 timer = Timer
 wheels.set_motor_rotation(8.8 * math.pi, 'cm')
 
-# start
+# move foward
+wheels.move(13, 'in', steering=0, speed=30)
 
+# turn to hit car 
+wheels.move(178, 'degrees', steering=100, speed=20)
 
-# move foward 
-wheels.move(18.5, 'in', steering=55, speed=55)
+# move foward to hit car
+wheels.move(24, 'in', steering=0, speed=55)
 
+# move back 
+wheels.move(-6, 'in', steering=0, speed=20)
 
+# turn to face the thing
+wheels.move(-100,'degrees', steering=65, speed=25)
 
-
-# move back
-
+# go to the thing
+wheels.move(14, 'in', steering=0, speed=50)
