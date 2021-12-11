@@ -18,13 +18,22 @@ wheels.move(13, 'in', steering=0, speed=30)
 wheels.move(178, 'degrees', steering=100, speed=20)
 
 # move foward to hit car
-wheels.move(24, 'in', steering=0, speed=55)
+wheels.move(21.5, 'in', steering=0, speed=55)
 
 # move back 
 wheels.move(-6, 'in', steering=0, speed=20)
 
 # turn to face the thing
-wheels.move(-100,'degrees', steering=65, speed=25)
+wheels.move(-137,'degrees', steering=79, speed=25)
 
 # go to the thing
-wheels.move(14, 'in', steering=0, speed=50)
+wheels.move(18, 'in', steering=0, speed=50)
+
+# turn to the thing
+wheels.move(140, 'degrees', steering=80, speed=30)
+
+# move foward
+wheels.move(17, 'in', steering=0, speed=50)
+
+#move back
+wheels.move(-5, 'in', steering=0, speed=35)
