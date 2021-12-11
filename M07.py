@@ -6,6 +6,7 @@ import math
 
 hub = PrimeHub()
 wheels = MotorPair('F', 'B')
+wheel1= Motor('B')
 updown = Motor('C')
 sideside = Motor('E')
 timer = Timer
@@ -18,7 +19,7 @@ wheels.move(13, 'in', steering=0, speed=30)
 wheels.move(178, 'degrees', steering=100, speed=20)
 
 # move foward to hit car
-wheels.move(21.5, 'in', steering=0, speed=55)
+wheels.move(21.9, 'in', steering=0, speed=40)
 
 # move back 
 wheels.move(-6, 'in', steering=0, speed=20)
@@ -27,13 +28,26 @@ wheels.move(-6, 'in', steering=0, speed=20)
 wheels.move(-137,'degrees', steering=79, speed=25)
 
 # go to the thing
-wheels.move(18, 'in', steering=0, speed=50)
+wheels.move(19.5, 'in', steering=0, speed=30)
 
 # turn to the thing
-wheels.move(140, 'degrees', steering=80, speed=30)
+wheels.move(130, 'degrees', steering=75, speed=30)
 
 # move foward
-wheels.move(17, 'in', steering=0, speed=50)
+wheels.move(13.5, 'in', steering=0, speed=30)
 
 #move back
-wheels.move(-5, 'in', steering=0, speed=35)
+wheels.move(-10, 'in', steering=0, speed=35)
+
+# turn
+wheels.move(195, 'degrees', steering=50, speed=35)
+
+# Move forward
+wheels.move(9, 'in', steering=0, speed=35)
+
+# Turn left
+wheels.move(130, 'degrees', steering=-90, speed=35)
+
+#Move forward
+wheels.move(25, 'in', steering=0, speed=35)
+
