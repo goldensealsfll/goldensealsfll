@@ -24,7 +24,7 @@ wheels.move(-1.9, 'in', steering=0, speed=50)
 updown.run_for_rotations(-0.90)
 
 # move forward
-wheels.move(1.3, 'in', steering=0, speed=50)
+wheels.move(1.9, 'in', steering=0, speed=50)
 
 # move wall down
 updown.run_for_rotations(0.75, speed= 100)
