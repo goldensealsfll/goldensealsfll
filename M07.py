@@ -43,10 +43,10 @@ wheels.move(-10, 'in', steering=0, speed=35)
 wheels.move(195, 'degrees', steering=50, speed=35)
 
 # Move forward
-wheels.move(9, 'in', steering=0, speed=35)
+wheels.move(8.5, 'in', steering=0, speed=35)
 
 # Turn left
-wheels.move(130, 'degrees', steering=-90, speed=35)
+wheels.move(150, 'degrees', steering=-90, speed=35)
 
 #Move forward
 wheels.move(25, 'in', steering=0, speed=35)
