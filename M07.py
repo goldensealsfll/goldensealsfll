@@ -19,7 +19,7 @@ wheels.move(13, 'in', steering=0, speed=30)
 wheels.move(178, 'degrees', steering=100, speed=20)
 
 # move foward to hit car
-wheels.move(21.9, 'in', steering=0, speed=40)
+wheels.move(22, 'in', steering=0, speed=40)
 
 # move back 
 wheels.move(-6, 'in', steering=0, speed=20)
@@ -28,13 +28,13 @@ wheels.move(-6, 'in', steering=0, speed=20)
 wheels.move(-137,'degrees', steering=79, speed=25)
 
 # go to the thing
-wheels.move(19.5, 'in', steering=0, speed=30)
+wheels.move(20, 'in', steering=0, speed=30)
 
 # turn to the thing
 wheels.move(130, 'degrees', steering=75, speed=30)
 
 # move foward
-wheels.move(13.5, 'in', steering=0, speed=30)
+wheels.move(12.5, 'in', steering=0, speed=30)
 
 #move back
 wheels.move(-10, 'in', steering=0, speed=35)
@@ -43,7 +43,7 @@ wheels.move(-10, 'in', steering=0, speed=35)
 wheels.move(195, 'degrees', steering=50, speed=35)
 
 # Move forward
-wheels.move(8.5, 'in', steering=0, speed=35)
+wheels.move(10, 'in', steering=0, speed=35)
 
 # Turn left
 wheels.move(150, 'degrees', steering=-90, speed=35)
@@ -51,3 +51,29 @@ wheels.move(150, 'degrees', steering=-90, speed=35)
 #Move forward
 wheels.move(25, 'in', steering=0, speed=35)
 
+# move back
+wheels.move(-7, 'in', steering=0, speed=20)
+
+# turn
+wheels.move(230, 'degrees', steering=180, speed=20)
+
+# move foward
+wheels.move(6, 'in', steering=0, speed=20)
+
+# turn again
+wheels.move(200, 'degrees', steering=150, speed=20)
+
+# move foward
+wheels.move(15, 'in', steering=0, speed=30)
+
+# move wall up
+updown.run_for_rotations(-100, speed=80)
+
+# move foward
+wheels.move(19, 'in', steering=0, speed=30)
+
+# turn
+wheels.move(-140, 'degrees', steering=75, speed=20)
+
+# move foward 
+wheels.move(35, 'in', steering=0, speed=30)
