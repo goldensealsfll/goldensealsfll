@@ -16,25 +16,25 @@ wheels.set_motor_rotation(8.8 * math.pi, 'cm')
 wheels.move(13, 'in', steering=0, speed=30)
 
 # turn to hit car 
-wheels.move(178, 'degrees', steering=100, speed=20)
+wheels.move(184, 'degrees', steering=107, speed=20)
 
 # move foward to hit car
-wheels.move(22, 'in', steering=0, speed=40)
+wheels.move(24, 'in', steering=0, speed=40)
 
 # move back 
-wheels.move(-6, 'in', steering=0, speed=20)
+wheels.move(-4.5, 'in', steering=0, speed=20)
 
 # turn to face the thing
 wheels.move(-137,'degrees', steering=79, speed=25)
 
 # go to the thing
-wheels.move(20, 'in', steering=0, speed=30)
+wheels.move(18.5, 'in', steering=0, speed=30)
 
 # turn to the thing
 wheels.move(130, 'degrees', steering=75, speed=30)
 
 # move foward
-wheels.move(12.5, 'in', steering=0, speed=30)
+wheels.move(8, 'in', steering=0, speed=30)
 
 #move back
 wheels.move(-10, 'in', steering=0, speed=35)
