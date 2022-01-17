@@ -17,22 +17,22 @@ wheels.move(9, 'in', steering=0, speed=30)
 wheels.move(178, 'degrees', steering=100, speed=20)
 
 # move foward to hit car
-wheels.move(15, 'in', steering=0, speed=40)
+wheels.move(13.8, 'in', steering=0, speed=40)
 
 # move back 
-wheels.move(-3, 'in', steering=0, speed=20)
+wheels.move(-2, 'in', steering=0, speed=20)
 
 # turn to face the thing
 wheels.move(-137,'degrees', steering=79, speed=25)
 
 # go to the thing
-wheels.move(15, 'in', steering=0, speed=25)
+wheels.move(14, 'in', steering=0, speed=25)
 
 # turn to the thing
-wheels.move(120, 'degrees', steering=73, speed=25)
+wheels.move(130, 'degrees', steering=80, speed=25)
 
 # move foward
-wheels.move(4.5, 'in', steering=0, speed=30)
+wheels.move(6.7, 'in', steering=0, speed=30)
 
 #move back
 wheels.move(-7, 'in', steering=0, speed=35)
@@ -41,14 +41,14 @@ wheels.move(-7, 'in', steering=0, speed=35)
 wheels.move(185, 'degrees', steering=53, speed=35)
 
 # Move forward
-wheels.move(10, 'in', steering=0, speed=35)
+wheels.move(11, 'in', steering=0, speed=35)
 
 # Turn left to helicopter
 wheels.move(155, 'degrees', steering=-115, speed=35)
 
 #Move forward
 wheels.move(15, 'in', steering=0, speed=35)
-raise SystemExit
+
 # move back
 wheels.move(-6, 'in', steering=0, speed=20)
 
