@@ -26,7 +26,7 @@ wheels.move(-2, 'in', steering=0, speed=20)
 wheels.move(-137,'degrees', steering=79, speed=25)
 
 # go to the thing
-wheels.move(14, 'in', steering=0, speed=25)
+wheels.move(14.5, 'in', steering=0, speed=25)
 
 # turn to the thing
 wheels.move(130, 'degrees', steering=80, speed=25)
