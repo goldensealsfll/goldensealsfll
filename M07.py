@@ -9,30 +9,31 @@ wheels = MotorPair('F', 'B')
 updown = Motor('C')
 sideside = Motor('E')
 timer = Timer
+wheels.set_motor_rotation(8.8 * math.pi, 'cm')
 
 # move foward
-wheels.move(9, 'in', steering=0, speed=30)
+wheels.move(13, 'in', steering=0, speed=30)
 
 # turn to hit car 
 wheels.move(178, 'degrees', steering=100, speed=20)
 
 # move foward to hit car
-wheels.move(13.8, 'in', steering=0, speed=40)
+wheels.move(21.9, 'in', steering=0, speed=40)
 
 # move back 
-wheels.move(-2, 'in', steering=0, speed=20)
+wheels.move(-6, 'in', steering=0, speed=20)
 
 # turn to face the thing
 wheels.move(-137,'degrees', steering=79, speed=25)
 
 # go to the thing
-wheels.move(14.5, 'in', steering=0, speed=25)
+wheels.move(19.5, 'in', steering=0, speed=30)
 
 # turn to the thing
-wheels.move(130, 'degrees', steering=80, speed=25)
-
+wheels.move(130, 'degrees', steering=75, speed=30)
+#raise SystemExit
 # move foward
-wheels.move(6.7, 'in', steering=0, speed=30)
+wheels.move(4.5, 'in', steering=0, speed=30)
 
 #move back
 wheels.move(-7, 'in', steering=0, speed=35)
