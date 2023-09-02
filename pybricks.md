@@ -1,6 +1,6 @@
 ## Command Reference
 
-`pybricksdev run ble file.py`
+`python -m pybricksdev run ble file.py`
 
 ## Documentation
 
