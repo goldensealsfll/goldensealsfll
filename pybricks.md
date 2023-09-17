@@ -1,6 +1,6 @@
 ## Command Reference
 
-`python -m pybricksdev run ble file.py`
+`python -m pybricksdev run ble --name "Name" file.py` where "Name" is either "Gracy" or "Belle".
 
 ## Documentation
 
