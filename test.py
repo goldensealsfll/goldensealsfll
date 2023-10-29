@@ -17,11 +17,14 @@ while True:
 
     if selected == "D":
        #dragon thing
-       arm_motor.run_angle(300, -175)
+       arm_motor.run_angle(300, -165)
        wait(500)
-       drive_base.straight(535)
+       drive_base.straight(150)
+       drive_base.turn(90)
+       drive_base.straight(195)
        drive_base.turn(-90)
-       drive_base.straight(105)
+       drive_base.straight(370)
+       drive_base.turn(-90)
        arm_motor.run(-60)
        wait(1000)
        drive_base.straight(-50)
@@ -30,9 +33,12 @@ while True:
        drive_base.straight(-100) 
        drive_base.turn(-90)
        drive_base.straight(600)
-      
+       break
+
+
 
     elif selected == "U":
+       
        #Immersive experience
        arm_motor.run_angle(300, 200)
        wait(500)
@@ -57,7 +63,4 @@ while True:
       
 
     elif selected == "X":
-       drive_base.straight(500)
-       drive_base.turn(90)
-       drive_base.straight(675)
        break
