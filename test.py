@@ -21,20 +21,14 @@ while True:
        wait(500)
        drive_base.straight(150)
        drive_base.turn(90)
-       drive_base.straight(195)
+       drive_base.straight(190)
        drive_base.turn(-90)
        drive_base.straight(370)
        drive_base.turn(-90)
        arm_motor.run(-60)
        wait(1000)
+       arm_motor.run(45)
        drive_base.straight(-50)
-       arm_motor.run(50)
-       wait(1000)
-       drive_base.straight(-100) 
-       drive_base.turn(-90)
-       drive_base.straight(600)
-       break
-
 
 
     elif selected == "U":
