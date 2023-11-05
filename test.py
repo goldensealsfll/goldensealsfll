@@ -16,20 +16,27 @@ while True:
     selected = hub_menu("D", "U", "S", "X") 
 
     if selected == "D":
-       #dragon thing
-       arm_motor.run_angle(300, -165)
-       wait(500)
-       drive_base.straight(150)
+   #bannana boat
+      # move forward from initial start postition
+       drive_base.straight(50)
+       
+       #turn to the bannana boat
        drive_base.turn(90)
-       drive_base.straight(190)
-       drive_base.turn(-90)
-       drive_base.straight(370)
-       drive_base.turn(-90)
-       arm_motor.run(-60)
-       wait(1000)
-       arm_motor.run(45)
-       drive_base.straight(-50)
 
+       # drive twards the movie set
+       drive_base.straight(600)     
+
+       # arm motor goes down to move the bannana boat
+       arm_motor.run_angle(100, 210, wait=False)
+
+       #turn so we can leave the camera in the intended area
+       drive_base.turn(-45)
+
+       #start moving backwards to the target area
+       drive_base.straight(300)
+
+       # arm motor goes up to be ready for next mission
+       arm_motor.run_angle(100, 210)
 
     elif selected == "U":
        
