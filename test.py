@@ -88,31 +88,50 @@ while True:
        arm_motor.run_angle(100, -22)
 
        #turn to move the camera
+
        drive_base.turn(65)
 
+       #arm motor goes up
+       arm_motor.run_angle(400, 220)
 
+       #move backwards to the next mission
+       drive_base.straight(-50)
 
+       #turn to go to timersive experience
+       drive_base.turn(25)
+
+       #movestraight to go through the colorful thingamo=abop
+       drive_base.straight(130)
+
+       #turn to timersive experience
+       drive_base.turn(90)
+
+       #drive twards timersve experience
+       drive_base.straight(600)
+
+       #turn to go to timersive experience
+       drive_base.turn(-90)
+
+       #move forward to be at timersive experience
+       drive_base.straight(390)
+
+       #turn to face the timersive experience
+       drive_base.turn(90)
+
+       #move forward
+       drive_base.straight(50)
+
+       #move arm motor down
+       arm_motor.run_angle(400,-200)
+
+       #move up the arm motor
+       arm_motor.run_angle(400, 170)
        break
 
     elif selected == "U":
        
        #Immersive experience
-       arm_motor.run_angle(300, 200)
-       wait(500)
-       drive_base.straight(675)
-       drive_base.turn(-90)
-       drive_base.straight(450)
-       arm_motor.run_angle(1000, -200)
-       wait(1000)
-       arm_motor.run_angle(400, 200)
-       drive_base.turn(-90)
-       drive_base.straight(440)
-       drive_base.turn(45)
-       arm_motor.run_angle(600, -210)
-       drive_base.straight(-40)
-       arm_motor.run_angle(600, 60)
-       drive_base.straight(40)
-       arm_motor.run_angle(600, -80)
+       
 
        break 
       
