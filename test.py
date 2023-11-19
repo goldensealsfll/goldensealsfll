@@ -42,7 +42,55 @@ while True:
 
        # arm motor goes up to be ready for next mission
        arm_motor.run_angle(100, 210)
-       
+
+       #pseudocode for rolling camera
+
+       #go back to make sure that robot doesn't ram into banana boat camera
+       drive_base.straight(-95)
+
+       #turn left to go to the orange thing
+       drive_base.turn(-65)
+
+       #go straight to go to the orange thing
+       drive_base.straight(350)
+
+       #turn to face the orange thing
+       drive_base.turn(120)
+
+       #move straight to ram the whight thing in front of orange arm(thing)
+       drive_base.straight(350)
+
+       #move arm motor down to hit orange thing to free the rollercoaster
+       arm_motor.run_angle(230, -200)
+
+       #move back up to get the attachment out with out knoking the orange thing on 
+       drive_base.straight(-20)
+
+       #move arm motor up
+       arm_motor.run_angle(100, 16)
+
+       #move backwards
+       drive_base.straight(-100)
+
+       #turn to movie set
+       drive_base.turn(-90)
+
+       #move straight to movir set
+       drive_base.straight(500)
+
+       #turn to movie set
+       drive_base.turn(90)
+
+       #move twards the camera
+       drive_base.straight(150)
+
+       #arm motor down for the camera
+       arm_motor.run_angle(100, -35)
+
+       #turn to move the camera
+       drive_base.turn(65)
+
+
 
        break
 
