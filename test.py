@@ -119,10 +119,11 @@ while True:
        drive_base.turn(90)
 
        #move forward
-       drive_base.straight(50)
+       drive_base.straight(20)
 
        #move arm motor down
-       arm_motor.run_angle(400,-200)
+       arm_motor.run_angle(400,-210)
+       wait(1000)
 
        #move up the arm motor
        arm_motor.run_angle(400, 170)
