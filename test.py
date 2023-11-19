@@ -33,15 +33,15 @@ while True:
        drive_base.straight(29)
 
        #arm motor goes down to move the bannana boat
-       arm_motor.run_angle(105, -215)
+       arm_motor.run_angle(150, -215)
 
        #start moving backwards to the target area
        drive_base.straight(-125)
 
-       wait(500)
+       wait(250)
 
        # arm motor goes up to be ready for next mission
-       arm_motor.run_angle(100, 210)
+       arm_motor.run_angle(150, 210)
 
        #pseudocode for rolling camera
 
@@ -67,7 +67,7 @@ while True:
        drive_base.straight(-20)
 
        #move arm motor up
-       arm_motor.run_angle(100, 16)
+       arm_motor.run_angle(100, 15)
 
        #move backwards
        drive_base.straight(-100)
@@ -76,16 +76,16 @@ while True:
        drive_base.turn(-90)
 
        #move straight to movir set
-       drive_base.straight(500)
+       drive_base.straight(510)
 
        #turn to movie set
        drive_base.turn(90)
 
        #move twards the camera
-       drive_base.straight(150)
+       drive_base.straight(130)
 
        #arm motor down for the camera
-       arm_motor.run_angle(100, -35)
+       arm_motor.run_angle(100, -22)
 
        #turn to move the camera
        drive_base.turn(65)
