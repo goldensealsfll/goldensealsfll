@@ -70,13 +70,13 @@ while True:
        arm_motor.run_angle(100, 15)
 
        #move backwards
-       drive_base.straight(-100)
+       drive_base.straight(-90)
 
        #turn to movie set
        drive_base.turn(-90)
 
        #move straight to movir set
-       drive_base.straight(510)
+       drive_base.straight(500)
 
        #turn to movie set
        drive_base.turn(90)
@@ -113,7 +113,7 @@ while True:
        drive_base.turn(-90)
 
        #move forward to be at timersive experience
-       drive_base.straight(390)
+       drive_base.straight(360)
 
        #turn to face the timersive experience
        drive_base.turn(90)
