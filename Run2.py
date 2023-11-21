@@ -67,7 +67,7 @@ while True:
         drive_base.turn(-37)
         drive_base.straight(400)
         drive_base.turn(120)
-        drive_base.straight(55)
+        drive_base.straight(35)
         arm_motor.run_angle(200,-215)
         drive_base.turn(75)
         drive_base.straight(175)
@@ -85,7 +85,7 @@ while True:
 
     
     if selected == "G":
-        drive_base.straight(700)
+        drive_base.straight(1750)
     elif selected == "Y":
         break
 
