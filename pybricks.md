@@ -9,4 +9,8 @@
 
 ## Installation
 
-[pybricksdev](https://github.com/pybricks/pybricksdev/blob/master/README.md)
+[pybricksdev](https://github.com/pybricks/pybricksdev/blob/master/README.md) contains instructions.
+
+Get the version of `pybricksdev` with USB support:
+
+`git clone https://github.com/nkarstens/pybricksdev.git -b usb`
