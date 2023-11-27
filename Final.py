@@ -95,7 +95,7 @@ while True:
         drive_base.turn(35)
 
         #drive forward a little to reach the camera
-        drive_base.straight(29)
+        drive_base.straight(35)
 
         #arm motor goes down to move the bannana boat
         arm_motor.run_angle(150, -215)
@@ -117,7 +117,7 @@ while True:
         drive_base.turn(-65)
 
         #go straight to go to the orange thing
-        drive_base.straight(350)
+        drive_base.straight(375)
 
         #turn to face the orange thing
         drive_base.turn(120)
@@ -135,13 +135,13 @@ while True:
         arm_motor.run_angle(100, 15)
 
         #move backwards
-        drive_base.straight(-90)
+        drive_base.straight(-110)
 
         #turn to movie set
         drive_base.turn(-90)
 
         #move straight to movir set
-        drive_base.straight(500)
+        drive_base.straight(520)
 
         #turn to movie set
         drive_base.turn(90)
@@ -166,7 +166,7 @@ while True:
         drive_base.turn(25)
 
         #movestraight to go through the colorful thingamo=abop
-        drive_base.straight(130)
+        drive_base.straight(150)
 
         #turn to timersive experience
         drive_base.turn(90)
@@ -178,7 +178,7 @@ while True:
         drive_base.turn(-90)
 
         #move forward to be at timersive experience
-        drive_base.straight(360)
+        drive_base.straight(420)
 
         #turn to face the timersive experience
         drive_base.turn(90)
