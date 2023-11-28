@@ -47,7 +47,7 @@ while True:
         drive_base.straight(345)
         
         #Using arm to lift back craft creator lid
-        arm_motor.run_angle(100,-80)
+        arm_motor.run_until_stalled(-100)
         wait(10)
         arm_motor.run_angle(100, 15)
         
@@ -56,10 +56,9 @@ while True:
         drive_base.straight(-200)
 
         #Turning and moving to statue (moving hand up)
+        arm_motor.run_angle(200,200,wait=False)
         drive_base.turn(23)
         drive_base.straight(400)
-        arm_motor.run_angle(200,200)
-
         
         #Turning to statue and getting in position for statue
         drive_base.turn(-37)
@@ -75,10 +74,10 @@ while True:
         drive_base.straight(100)
         arm_motor.run_angle(200,200)
         drive_base.turn(-70)
-        drive_base.straight(900)
+        drive_base.straight(1200)
 
     elif selected == "B":
-        drive_base.straight(1750)
+        drive_base.straight(2500)
 
     elif selected == "C":
         #bannana boat
