@@ -126,13 +126,13 @@ while True:
         arm_motor.run_angle(230, -200)
 
         #move back up to get the attachment out with out knoking the orange thing on 
-        drive_base.straight(-20)
+        drive_base.straight(-25)
 
         #move arm motor up
         arm_motor.run_angle(100, 20)
 
         #move backwards
-        drive_base.straight(-110)
+        drive_base.straight(-90)
 
         #turn to movie set
         drive_base.turn(-90)
@@ -144,7 +144,7 @@ while True:
         drive_base.turn(90)
 
         #move twards the camera
-        drive_base.straight(130)
+        drive_base.straight(105)
 
         #arm motor down for the camera
         arm_motor.run_angle(100, -22)
@@ -184,7 +184,7 @@ while True:
         drive_base.straight(20)
 
         #move arm motor down
-        arm_motor.run_angle(400,-210)
+        arm_motor.run_time(-200, 3000)
         wait(1000)
 
         #move up the arm motor
