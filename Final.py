@@ -47,32 +47,31 @@ while True:
         drive_base.straight(345)
         
         #Using arm to lift back craft creator lid
-        arm_motor.run_until_stalled(-100)
-        wait(10)
-        arm_motor.run_angle(100, 15)
+        arm_motor.run_until_stalled(-100, then=Stop.HOLD)
         
         #Turning and moving backwards to get onto position to move to the stage
         drive_base.turn(-10)
         drive_base.straight(-200)
 
         #Turning and moving to statue (moving hand up)
-        arm_motor.run_angle(200,200,wait=False)
         drive_base.turn(23)
+        arm_motor.run_angle(200,200,wait=False)
         drive_base.straight(400)
         
         #Turning to statue and getting in position for statue
-        drive_base.turn(-37)
+        drive_base.turn(-50)
         drive_base.straight(400)
         drive_base.turn(120)
-        drive_base.straight(35)
+        drive_base.straight(87)
         arm_motor.run_angle(200,-215)
         drive_base.turn(75)
+        arm_motor.run_angle(200,20)
         drive_base.straight(175)
 
         #Heading back to home base
-        drive_base.turn(45)
+        drive_base.turn(65)
         drive_base.straight(100)
-        arm_motor.run_angle(200,200)
+        arm_motor.run_angle(200,200,wait=False)
         drive_base.turn(-70)
         drive_base.straight(1200)
 
