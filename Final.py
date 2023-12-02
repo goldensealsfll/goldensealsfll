@@ -188,10 +188,7 @@ while True:
         wait(1000)
 
         #move up the arm motor
-        #arm_motor.run_angle(400, 170)
-
-        #move forward
-        drive_base.straight(20)
+        arm_motor.run_angle(400, 170)
     
     elif selected == "X":
        break   
