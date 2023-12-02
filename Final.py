@@ -96,12 +96,11 @@ while True:
         drive_base.straight(35)
 
         #arm motor goes down to move the bannana boat
-        arm_motor.run_angle(150, -215)
+        arm_motor.run_angle(150, -215, wait=False)
+        wait(3000)
 
         #start moving backwards to the target area
         drive_base.straight(-125)
-
-        wait(250)
 
         # arm motor goes up to be ready for next mission
         arm_motor.run_angle(150, 210)
@@ -130,7 +129,7 @@ while True:
         drive_base.straight(-20)
 
         #move arm motor up
-        arm_motor.run_angle(100, 15)
+        arm_motor.run_angle(100, 20)
 
         #move backwards
         drive_base.straight(-110)
@@ -176,7 +175,7 @@ while True:
         drive_base.turn(-90)
 
         #move forward to be at timersive experience
-        drive_base.straight(420)
+        drive_base.straight(400)
 
         #turn to face the timersive experience
         drive_base.turn(90)
@@ -189,7 +188,10 @@ while True:
         wait(1000)
 
         #move up the arm motor
-        arm_motor.run_angle(400, 170)
+        #arm_motor.run_angle(400, 170)
+
+        #move forward
+        drive_base.straight(20)
     
     elif selected == "X":
        break   
