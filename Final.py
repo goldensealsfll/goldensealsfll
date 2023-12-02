@@ -54,7 +54,11 @@ while True:
         drive_base.straight(-200)
 
         #Turning and moving to statue (moving hand up)
+<<<<<<< HEAD
         drive_base.turn(28)
+=======
+        drive_base.turn(23)
+>>>>>>> c2e808d41bd5daa4081da7eb2d2f204230a8e81f
         arm_motor.run_angle(200,200,wait=False)
         drive_base.straight(400)
         
@@ -62,7 +66,7 @@ while True:
         drive_base.turn(-50)
         drive_base.straight(400)
         drive_base.turn(120)
-        drive_base.straight(35)
+        drive_base.straight(87)
         arm_motor.run_angle(200,-215)
         drive_base.turn(75)
         arm_motor.run_angle(200,20)
