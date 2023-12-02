@@ -100,9 +100,11 @@ while True:
         wait(3000)
 
         #start moving backwards to the target area
+        drive_base.settings(straight_speed=200, turn_rate=100)
         drive_base.straight(-125)
 
         # arm motor goes up to be ready for next mission
+        drive_base.settings(straight_speed=300, turn_rate=100)
         arm_motor.run_angle(150, 210)
 
         #pseudocode for rolling camera
