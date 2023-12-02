@@ -54,7 +54,7 @@ while True:
         drive_base.straight(-200)
 
         #Turning and moving to statue (moving hand up)
-        drive_base.turn(23)
+        drive_base.turn(28)
         arm_motor.run_angle(200,200,wait=False)
         drive_base.straight(400)
         
@@ -62,7 +62,7 @@ while True:
         drive_base.turn(-50)
         drive_base.straight(400)
         drive_base.turn(120)
-        drive_base.straight(87)
+        drive_base.straight(35)
         arm_motor.run_angle(200,-215)
         drive_base.turn(75)
         arm_motor.run_angle(200,20)
@@ -180,15 +180,23 @@ while True:
         #turn to face the timersive experience
         drive_base.turn(90)
 
-        #move forward
-        drive_base.straight(20)
-
         #move arm motor down
-        arm_motor.run_time(-200, 3000)
+        arm_motor.run_time(-200, 4000)
         wait(1000)
 
         #move up the arm motor
         arm_motor.run_angle(400, 170)
+
+        #turn to go back home
+        drive_base.turn(-90)
+
+        #go straight 
+        drive_base.straight(200)
+
+        #turn
+        drive_base.turn(90)
     
     elif selected == "X":
-       break   
+        drive_base.straight(300)
+        wait(1000)
+        drive_base.straight(-400)
