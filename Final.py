@@ -11,7 +11,9 @@ arm_motor = Motor(Port.C)
 drive_base = DriveBase (left_wheel, right_wheel, 88, 112)
 
 drive_base.use_gyro(True)
-drive_base.settings(straight_speed=300, turn_rate=100) 
+
+default_speed = 300
+drive_base.settings(straight_speed=default_speed, turn_rate=100)
 
 while True:
     selected = hub_menu("A", "B", "C", "X") 
@@ -103,9 +105,9 @@ while True:
         #start moving backwards to the target area
         drive_base.settings(straight_speed=200, turn_rate=100)
         drive_base.straight(-125)
+        drive_base.settings(straight_speed=default_speed)
 
         # arm motor goes up to be ready for next mission
-        drive_base.settings(straight_speed=300, turn_rate=100)
         arm_motor.run_angle(150, 210)
 
         #pseudocode for rolling camera
