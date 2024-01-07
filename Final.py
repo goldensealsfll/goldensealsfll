@@ -68,18 +68,12 @@ while True:
         drive_base.turn(-50)
         drive_base.straight(450)
         drive_base.turn(120)
-        drive_base.straight(20)
-        arm_motor.run_angle(200,-215)
+        drive_base.straight(35)
+        arm_motor.run_time(-300, 1500, then=Stop.COAST)
         drive_base.turn(75)
-        arm_motor.run_angle(200,20)
-        drive_base.straight(190)
-
-        #Heading back to home base
+        drive_base.straight(750)
         drive_base.turn(65)
-        drive_base.straight(100)
-        arm_motor.run_angle(200,200,wait=False)
-        drive_base.turn(-80)
-        drive_base.straight(1200)
+        drive_base.straight(400)
 
     elif selected == "B":
         drive_base.straight(2500)
