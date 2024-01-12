@@ -99,6 +99,17 @@ while True:
         arm_motor.run_angle(150, -215, wait=False)
         wait(3000)
 
+        if arm_motor.stalled():
+            hub.speaker.beep()
+            wait(1000)
+            arm_motor.run_angle(150, 20)
+            wait(1000)
+            drive_base.straight(-20)
+            wait(1000)
+            arm_motor.run_angle(150, -20)
+            wait(1000)
+
+
         #start moving backwards to the target area
         drive_base.settings(straight_speed=200, turn_rate=100)
         drive_base.straight(-125)
@@ -139,8 +150,11 @@ while True:
         #turn to movie set
         drive_base.turn(-90)
 
+        #move arm motor sown
+        arm_motor.run_angle(150, -15)
+
         #move straight to movir set
-        drive_base.straight(520)
+        drive_base.straight(510)
 
         #turn to movie set
         drive_base.turn(90)
@@ -149,7 +163,8 @@ while True:
         drive_base.straight(105)
 
         #arm motor down for the camera
-        arm_motor.run_angle(100, -22)
+        arm_motor.run_angle(100, -15)
+        wait(1000)
 
         #turn to move the camera
 
@@ -165,29 +180,42 @@ while True:
         drive_base.turn(25)
 
         #movestraight to go through the colorful thingamo=abop
-        drive_base.straight(150)
+        drive_base.straight(200)
 
         #turn to timersive experience
         drive_base.turn(90)
 
         #drive twards timersve experience
-        drive_base.straight(600)
+        drive_base.straight(640)
 
         #turn to go to timersive experience
         drive_base.turn(-90)
 
         #move forward to be at timersive experience
-        drive_base.straight(400)
+        drive_base.straight(560)
 
         #turn to face the timersive experience
         drive_base.turn(90)
 
-        #move arm motor down
-        arm_motor.run_time(-200, 4000)
+        #move forward
+        drive_base.straight(150)
+
+        #turn to timersive experience
+        drive_base.turn(95)
+
+        #arm motor down
+        arm_motor.run_angle(300, -230)
         wait(1000)
 
+        #move forward
+        drive_base.straight(10)
+
+        #move arm motor down
+        #arm_motor.run_time(-200, 4000)
+        #wait(1000)
+
         #move up the arm motor
-        arm_motor.run_angle(400, 170)
+        arm_motor.run_angle(400, 60)
 
         #turn to go back home
         drive_base.turn(-90)
