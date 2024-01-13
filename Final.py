@@ -99,16 +99,12 @@ while True:
         arm_motor.run_angle(150, -215, wait=False)
         wait(3000)
 
+        #handle the case where the arm gets stuck on the block
         if arm_motor.stalled():
             hub.speaker.beep()
-            wait(1000)
             arm_motor.run_angle(150, 20)
-            wait(1000)
             drive_base.straight(-20)
-            wait(1000)
             arm_motor.run_angle(150, -20)
-            wait(1000)
-
 
         #start moving backwards to the target area
         drive_base.settings(straight_speed=200, turn_rate=100)
@@ -164,7 +160,6 @@ while True:
 
         #arm motor down for the camera
         arm_motor.run_angle(100, -15)
-        wait(1000)
 
         #turn to move the camera
 
@@ -207,18 +202,24 @@ while True:
         arm_motor.run_angle(300, -230)
         wait(1000)
 
+        #TODO: stall detection needs to be improved
+        if arm_motor.stalled():
+            hub.speaker.beep()
+            wait(1000)
+
         #move forward
-        drive_base.straight(10)
+        drive_base.straight(25)
 
         #move arm motor down
         #arm_motor.run_time(-200, 4000)
         #wait(1000)
+        drive_base.straight(15)
 
         #move up the arm motor
         arm_motor.run_angle(400, 60)
 
         #turn to go back home
-        drive_base.turn(-90)
+        drive_base.turn(90)
 
         #go straight 
         drive_base.straight(200)
