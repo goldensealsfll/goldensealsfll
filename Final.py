@@ -187,19 +187,19 @@ while True:
         drive_base.turn(-90)
 
         #move forward to be at timersive experience
-        drive_base.straight(560)
+        drive_base.straight(590)
 
         #turn to face the timersive experience
         drive_base.turn(90)
 
         #move forward
-        drive_base.straight(150)
+        drive_base.straight(170)
 
         #turn to timersive experience
         drive_base.turn(95)
 
         #arm motor down
-        arm_motor.run_angle(300, -230)
+        arm_motor.run_angle(300, -220)
         wait(1000)
 
         #TODO: stall detection needs to be improved
@@ -208,24 +208,29 @@ while True:
             wait(1000)
 
         #move forward
-        drive_base.straight(25)
-
-        #move arm motor down
-        #arm_motor.run_time(-200, 4000)
-        #wait(1000)
-        drive_base.straight(15)
+        drive_base.straight(20)
 
         #move up the arm motor
         arm_motor.run_angle(400, 60)
 
         #turn to go back home
-        drive_base.turn(90)
+        drive_base.turn(-25)
+
+        #move backward
+        drive_base.straight(-170)
+
+        #turn to go to home
+        drive_base.turn(110)
 
         #go straight 
         drive_base.straight(200)
 
         #turn
-        drive_base.turn(90)
+        drive_base.turn(45)
+
+        #move forward
+        drive_base.straight(800)
+
     
     elif selected == "X":
         drive_base.straight(300)
