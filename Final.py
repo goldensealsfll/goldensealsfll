@@ -7,7 +7,7 @@ from pybricks.tools import wait, StopWatch, hub_menu
 hub = PrimeHub(top_side=Axis.Z, front_side=-Axis.Y)
 left_wheel = Motor(Port.A, Direction.COUNTERCLOCKWISE)
 right_wheel = Motor(Port.E,Direction.CLOCKWISE)
-arm_motor = Motor(Port.C)
+arm_motor = Motor(Port.C, Direction.COUNTERCLOCKWISE, [12, 36])
 drive_base = DriveBase (left_wheel, right_wheel, 88, 112)
 
 drive_base.use_gyro(True)
@@ -39,7 +39,7 @@ while True:
         #Going forward to pull back lever, turning, and pulling back lever of lights
         drive_base.straight(210)
         drive_base.turn(-45)
-        arm_motor.run_angle(600,-135)
+        arm_motor.run_angle(600,-110)
         
         #Turning to move backwards and away from music concert
         drive_base.turn(-30)
@@ -50,9 +50,8 @@ while True:
         drive_base.straight(345)
         
         #Using arm to lift back craft creator lid
-        arm_motor.run_until_stalled(-100, then=Stop.COAST)
+        arm_motor.run_until_stalled(-100, then=Stop.COAST, duty_limit=30)
 
-        
         #Turning and moving backwards to get onto position to move to the stage
         drive_base.settings(straight_speed=200, turn_rate=100)
         drive_base.turn(-10)
