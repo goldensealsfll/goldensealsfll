@@ -16,7 +16,7 @@ default_speed = 300
 drive_base.settings(straight_speed=default_speed, turn_rate=100)
 
 while True:
-    selected = hub_menu("A", "B", "C", "D", "X") 
+    selected = hub_menu("A", "B", "C", "D", "E", "X") 
 
     if selected == "A":
         #Getting in position by turning and going straight  to move forward to concert stage
@@ -233,17 +233,19 @@ while True:
     elif selected == "D":
         drive_base.straight(200)
         drive_base.turn(90)
-        drive_base.straight(265)
-        drive_base.turn(-47)
-        arm_motor.run_angle(700, -220)
-        drive_base.straight(125)
-        arm_motor.reset_angle(0)
+        drive_base.straight(260)
+        drive_base.turn(-51)
+        arm_motor.run_angle(300, -220)
+        drive_base.straight(170)
         arm_motor.dc(100)
-        wait(1000)
-        while arm_motor.angle() < 100:
-            drive_base.straight(-20)
-            drive_base.straight(20)
-
+        arm_motor.run_time(300, 2000)
+        drive_base.straight(-150)
+        drive_base.turn(-10)
+        drive_base.straight(110)
+        arm_motor.run_angle(300, -1000)
+        drive_base.turn(-15)
+        arm_motor.run_angle(300, 1000)
+        drive_base.straight(50)
 
 
     
