@@ -59,23 +59,46 @@ while True:
         drive_base.settings(straight_speed=default_speed)
 
         #Turning and moving to statue (moving hand up)
-        drive_base.turn(28)
+        drive_base.turn(38)
         arm_motor.run_angle(200,200,wait=False)
         drive_base.straight(400)
         
         #Turning to statue and getting in position for statue
-        drive_base.turn(-50)
+        drive_base.turn(-65)
         drive_base.straight(450)
         drive_base.turn(120)
         drive_base.straight(35)
-        arm_motor.run_time(-300, 1500, then=Stop.COAST)
+        arm_motor.run_time(-300, 1150, then=Stop.COAST)
         drive_base.turn(75)
         drive_base.straight(750)
         drive_base.turn(65)
-        drive_base.straight(400)
+        drive_base.straight(600)
 
     elif selected == "B":
-        drive_base.straight(2500)
+        #move to get masterpiece in the museum
+        arm_motor.run_angle(600,-206)
+        drive_base.straight(500)
+        drive_base.turn(-73)
+        drive_base.straight(930)
+        drive_base.turn(70)
+        drive_base.straight(-100)
+        drive_base.turn(-165)
+        #lght show motor does up
+        arm_motor.run_angle(600, 8)
+        drive_base.straight(98)
+        arm_motor.run_angle(200, 80)
+        arm_motor.run_angle(600, -22)
+        #picking up random girl
+        drive_base.straight(-140)
+        drive_base.turn(-98)
+        arm_motor.run_angle(600, -55)
+        drive_base.straight(700)
+        drive_base.turn(90)
+        drive_base.straight(565)
+        drive_base.turn(95)
+        drive_base.straight(2000)
+
+
 
     elif selected == "C":
         #bannana boat
