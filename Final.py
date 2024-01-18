@@ -12,11 +12,11 @@ drive_base = DriveBase (left_wheel, right_wheel, 88, 112)
 
 drive_base.use_gyro(True)
 
-default_speed = 300
-drive_base.settings(straight_speed=default_speed, turn_rate=100)
+default_speed = 600
 
 while True:
     selected = hub_menu("A", "B", "C", "D", "E", "X") 
+    drive_base.settings(straight_speed=default_speed, turn_rate=100)
 
     if selected == "A":
         #Getting in position by turning and going straight  to move forward to concert stage
@@ -76,7 +76,7 @@ while True:
 
     elif selected == "B":
         #move to get masterpiece in the museum
-        arm_motor.run_angle(600,-220)
+        arm_motor.run_angle(600, -210)
         drive_base.straight(500)
         drive_base.turn(-73)
         drive_base.straight(930)
@@ -84,7 +84,7 @@ while True:
         drive_base.straight(-100)
         drive_base.turn(-169)
         #lght show motor does up
-        arm_motor.run_angle(600, 8)
+        arm_motor.run_angle(600, 15)
         drive_base.straight(98)
         arm_motor.run_angle(200, 73)
         arm_motor.run_angle(600, -22)
@@ -94,8 +94,9 @@ while True:
         arm_motor.run_angle(600, -55)
         drive_base.straight(700)
         drive_base.turn(90)
-        drive_base.straight(565)
-        drive_base.turn(95)
+        drive_base.straight(645)
+        drive_base.turn(97)
+        drive_base.settings(straight_speed=400, turn_rate=100)
         drive_base.straight(2000)
 
 
@@ -119,7 +120,7 @@ while True:
 
         #arm motor goes down to move the bannana boat
         arm_motor.run_angle(150, -190, wait=False)
-        wait(3000)
+        wait(2000)
 
         #handle the case where the arm gets stuck on the block
         if arm_motor.stalled():
@@ -278,5 +279,5 @@ while True:
     
     elif selected == "X":
         drive_base.straight(300)
-        wait(1000)
+        wait(100)
         drive_base.straight(-400)
