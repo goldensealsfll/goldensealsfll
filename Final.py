@@ -76,17 +76,17 @@ while True:
 
     elif selected == "B":
         #move to get masterpiece in the museum
-        arm_motor.run_angle(600,-206)
+        arm_motor.run_angle(600,-220)
         drive_base.straight(500)
         drive_base.turn(-73)
         drive_base.straight(930)
         drive_base.turn(70)
         drive_base.straight(-100)
-        drive_base.turn(-165)
+        drive_base.turn(-169)
         #lght show motor does up
         arm_motor.run_angle(600, 8)
         drive_base.straight(98)
-        arm_motor.run_angle(200, 80)
+        arm_motor.run_angle(200, 73)
         arm_motor.run_angle(600, -22)
         #picking up random girl
         drive_base.straight(-140)
@@ -118,7 +118,7 @@ while True:
         drive_base.straight(35)
 
         #arm motor goes down to move the bannana boat
-        arm_motor.run_angle(150, -215, wait=False)
+        arm_motor.run_angle(150, -190, wait=False)
         wait(3000)
 
         #handle the case where the arm gets stuck on the block
@@ -134,7 +134,7 @@ while True:
         drive_base.settings(straight_speed=default_speed)
 
         # arm motor goes up to be ready for next mission
-        arm_motor.run_angle(150, 210)
+        arm_motor.run_angle(150, 180)
 
         #pseudocode for rolling camera
 
@@ -151,25 +151,25 @@ while True:
         drive_base.turn(120)
 
         #move straight to ram the whight thing in front of orange arm(thing)
-        drive_base.straight(350)
+        drive_base.straight(340)
 
         #move arm motor down to hit orange thing to free the rollercoaster
-        arm_motor.run_angle(230, -200)
+        arm_motor.run_angle(230, -190)
 
         #move back up to get the attachment out with out knoking the orange thing on 
         drive_base.straight(-25)
 
         #move arm motor up
-        arm_motor.run_angle(100, 20)
+        arm_motor.run_angle(100, 33)
 
         #move backwards
-        drive_base.straight(-90)
+        drive_base.straight(-80)
 
         #turn to movie set
         drive_base.turn(-90)
 
         #move arm motor sown
-        arm_motor.run_angle(150, -15)
+        arm_motor.run_angle(150, -10)
 
         #move straight to movir set
         drive_base.straight(510)
@@ -181,14 +181,14 @@ while True:
         drive_base.straight(105)
 
         #arm motor down for the camera
-        arm_motor.run_angle(100, -15)
+        arm_motor.run_angle(100, -10)
 
         #turn to move the camera
 
         drive_base.turn(65)
 
         #arm motor goes up
-        arm_motor.run_angle(400, 220)
+        arm_motor.run_angle(400, 180)
 
         #move backwards to the next mission
         drive_base.straight(-50)
@@ -209,19 +209,19 @@ while True:
         drive_base.turn(-90)
 
         #move forward to be at timersive experience
-        drive_base.straight(590)
+        drive_base.straight(585)
 
         #turn to face the timersive experience
         drive_base.turn(90)
 
         #move forward
-        drive_base.straight(170)
+        drive_base.straight(190)
 
         #turn to timersive experience
         drive_base.turn(95)
 
         #arm motor down
-        arm_motor.run_angle(300, -220)
+        arm_motor.run_angle(300, -190)
         wait(1000)
 
         #TODO: stall detection needs to be improved
@@ -257,18 +257,22 @@ while True:
         drive_base.straight(200)
         drive_base.turn(90)
         drive_base.straight(260)
-        drive_base.turn(-51)
-        arm_motor.run_angle(300, -220)
-        drive_base.straight(170)
+        drive_base.turn(-48)
+        arm_motor.run_angle(300, -210)
+        drive_base.straight(161)
         arm_motor.dc(100)
         arm_motor.run_time(300, 2000)
-        drive_base.straight(-150)
-        drive_base.turn(-10)
-        drive_base.straight(110)
-        arm_motor.run_angle(300, -1000)
-        drive_base.turn(-15)
-        arm_motor.run_angle(300, 1000)
-        drive_base.straight(50)
+        drive_base.straight(-100)
+        drive_base.turn(-20)
+        arm_motor.run_angle(300, -60)
+        drive_base.straight(-50)
+        drive_base.turn(19)
+        drive_base.straight(150)
+        arm_motor.run_time(300, 2000)
+        drive_base.straight(-145)
+        drive_base.turn(-42)
+        drive_base.straight(500)
+        drive_base.turn(-45)
 
 
     
