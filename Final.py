@@ -15,7 +15,7 @@ drive_base.use_gyro(True)
 default_speed = 600
 
 while True:
-    selected = hub_menu("A", "B", "C", "D", "E", "X") 
+    selected = hub_menu("A", "B", "C", "D", "X") 
     drive_base.settings(straight_speed=default_speed, turn_rate=100)
 
     if selected == "A":
@@ -107,6 +107,8 @@ while True:
 
 
     elif selected == "C":
+        selected = hub_menu("N","Y") 
+        
         #bannana boat
         #move forward from initial start postition
         drive_base.straight(90)
@@ -187,14 +189,14 @@ while True:
         drive_base.straight(105)
 
         #arm motor down for the camera
-        arm_motor.run_angle(100, -10)
+        arm_motor.run_angle(100, -20)
 
         #turn to move the camera
 
         drive_base.turn(65)
 
         #arm motor goes up
-        arm_motor.run_angle(400, 180)
+        arm_motor.run_angle(400, 190)
 
         #move backwards to the next mission
         drive_base.straight(-50)
@@ -239,25 +241,31 @@ while True:
         drive_base.straight(20)
 
         #move up the arm motor
-        arm_motor.run_angle(400, 60)
+        arm_motor.run_angle(400, 120)
 
         #turn to go back home
-        drive_base.turn(-25)
+        drive_base.turn(-50)
 
         #move backward
-        drive_base.straight(-170)
+        drive_base.straight(-350)
 
         #turn to go to home
-        drive_base.turn(110)
+        drive_base.turn(-80)
 
         #go straight 
+        drive_base.straight(180)
+
+        #Theater Scene Change
         drive_base.straight(200)
+        drive_base.straight(-100)
 
-        #turn
-        drive_base.turn(45)
-
-        #move forward
-        drive_base.straight(800)
+        #if the other team is not doing this, do it a second time
+    
+        if selected == "N":
+            drive_base.straight(200)
+            drive_base.straight(-100)
+            
+        
 
     elif selected == "D":
         drive_base.straight(200)
@@ -277,35 +285,8 @@ while True:
         arm_motor.run_time(300, 2000)
         drive_base.straight(-145)
         drive_base.turn(-42)
-        drive_base.straight(480)
-        drive_base.turn(-45)
-        drive_base.straight(200)
-        drive_base.straight(-100)
-        drive_base.straight(200)
-        drive_base.straight(-100)
 
-    elif selected == "E":
-        drive_base.straight(200)
-        drive_base.turn(90)
-        drive_base.straight(260)
-        drive_base.turn(-48)
-        arm_motor.run_angle(300, -210)
-        drive_base.straight(161)
-        arm_motor.dc(100)
-        arm_motor.run_time(300, 2000)
-        drive_base.straight(-100)
-        drive_base.turn(-20)
-        arm_motor.run_angle(300, -60)
-        drive_base.straight(-50)
-        drive_base.turn(19)
-        drive_base.straight(150)
-        arm_motor.run_time(300, 2000)
-        drive_base.straight(-145)
-        drive_base.turn(-42)
-        drive_base.straight(480)
-        drive_base.turn(-45)
-        drive_base.straight(200)
-        drive_base.straight(-100)
+
 
 
     
