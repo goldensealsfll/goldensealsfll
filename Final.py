@@ -67,7 +67,7 @@ while True:
         drive_base.turn(-65)
         drive_base.straight(450)
         drive_base.turn(120)
-        drive_base.straight(35)
+        drive_base.straight(40)
         arm_motor.run_time(-300, 1150, then=Stop.COAST)
         drive_base.turn(75)
         drive_base.straight(750)
@@ -76,7 +76,8 @@ while True:
 
     elif selected == "B":
         #move to get masterpiece in the museum
-        arm_motor.run_angle(600, -210)
+        drive_base.settings(straight_speed=400)
+        arm_motor.run_angle(600, -205)
         drive_base.straight(500)
         drive_base.turn(-73)
         drive_base.straight(930)
@@ -84,9 +85,10 @@ while True:
         drive_base.straight(-100)
         drive_base.turn(-169)
         #lght show motor does up
-        arm_motor.run_angle(600, 15)
+        arm_motor.run_angle(600, 8)
         drive_base.straight(98)
-        arm_motor.run_angle(200, 73)
+        drive_base.settings(straight_speed=default_speed)
+        arm_motor.run_angle(200, 62)
         arm_motor.run_angle(600, -22)
         #picking up random girl
         drive_base.straight(-140)
@@ -94,10 +96,13 @@ while True:
         arm_motor.run_angle(600, -55)
         drive_base.straight(700)
         drive_base.turn(90)
-        drive_base.straight(645)
-        drive_base.turn(97)
+        drive_base.straight(700)
+        drive_base.turn(103)
         drive_base.settings(straight_speed=400, turn_rate=100)
-        drive_base.straight(2000)
+        drive_base.straight(1000)
+        drive_base.turn(-25)
+        drive_base.straight(1000)
+
 
 
 
@@ -272,8 +277,35 @@ while True:
         arm_motor.run_time(300, 2000)
         drive_base.straight(-145)
         drive_base.turn(-42)
-        drive_base.straight(500)
+        drive_base.straight(480)
         drive_base.turn(-45)
+        drive_base.straight(200)
+        drive_base.straight(-100)
+        drive_base.straight(200)
+        drive_base.straight(-100)
+
+    elif selected == "E":
+        drive_base.straight(200)
+        drive_base.turn(90)
+        drive_base.straight(260)
+        drive_base.turn(-48)
+        arm_motor.run_angle(300, -210)
+        drive_base.straight(161)
+        arm_motor.dc(100)
+        arm_motor.run_time(300, 2000)
+        drive_base.straight(-100)
+        drive_base.turn(-20)
+        arm_motor.run_angle(300, -60)
+        drive_base.straight(-50)
+        drive_base.turn(19)
+        drive_base.straight(150)
+        arm_motor.run_time(300, 2000)
+        drive_base.straight(-145)
+        drive_base.turn(-42)
+        drive_base.straight(480)
+        drive_base.turn(-45)
+        drive_base.straight(200)
+        drive_base.straight(-100)
 
 
     
