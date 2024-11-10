@@ -1,104 +1,110 @@
+from pybricks.hubs import PrimeHub
 from pybricks.pupdevices import Motor, ColorDistanceSensor
-from pybricks.pupdevices import Motor, ColorDistanceSensor
-from pybricks. parameters import Axis, Button, Color, Direction, Port, Stop
-from pybricks.robotics import GyroDriveBase
-from pybricks.tools import wait, hub_menu
+from pybricks.parameters import Axis, Button, Color, Direction, Port, Side, Stop
+from pybricks.robotics import DriveBase
+from pybricks.tools import wait, StopWatch, hub_menu
 
-hub = Primehub(top_side=Axis.Z, front_side=-Axis.Y)
+hub = PrimeHub(top_side=Axis.Z, front_side=-Axis.Y)
 left_wheel = Motor(Port.A, Direction.COUNTERCLOCKWISE)
-right_wheel = (Port.E)
-arm_motor = Motor(Port.C)
-drive_base = GyroDriveBase(left_wheel, right_wheel, 88, 112)
+right_wheel = Motor(Port.E,Direction.CLOCKWISE)
+arm_motor = Motor(Port.C, Direction.COUNTERCLOCKWISE, [12, 36])
+drive_base = DriveBase (left_wheel, right_wheel, 88, 112)
 
-drive_base.settings(strait_speed=100, turn_rate=100)
+drive_base.use_gyro(True)
+
+default_speed = 600
 
 while True:
-    selected = hub_menu("A", "B", "C", "D", "X")
+    selected = hub_menu("A", "B", "C", "D", "X") 
+    drive_base.settings(straight_speed=default_speed, turn_rate=100)
     
     if selected == "A":
         #Getting in position by turning and going straight      
         drive_base.straight(230)
         drive_base.turn(90)
         #getting away from home base 1
-        drive_base.straight(150)
+        drive_base.straight(265)
         #turning twards mission
         drive_base.turn(-90)
         #getting to mission and turning twards it
-        drive_base.straight(250)
-        drive_base.turn(90)
+        drive_base.straight(410)
+        drive_base.turn(-90)
         #raming into mission to complete it
-        drive_base.straight(100)
+        drive_base.straight(180)
         #driving away from the mission
-        drive_base.straight(-100)
-        #turning twards next mission
-        drive_base.turn(-45)
-        #going to next missiion
-        drive_base.straight(150)
-        #puting down arm to complete mission
-        arm_motor.run_angle(600, -100)
-        #moving back to go to the next mission
         drive_base.straight(-150)
-        #turnning 160 degress to turn pother way
-        drive_base.turn(160)
-        #driving twards next mission
-        drive_base.straight(300)
-        #turn twards lever
-        drive_base.turn(120)
-        #drive forward and backwards to push lever
-        drive_base.straight(100)
-        drive_base.straight(-200)
-        #turn to to to the trident
+        #turning twards next mission
         drive_base.turn(45)
-        #drive twards to crab cages
-        drive_base.straight(300)
-        #turn to get closer to trident
-        drive_base.turn(90)
-        #drive forward to get in front of trident
-        drive_base.straight(200)
-        #turn to the trident
-        drive_base.turn(120)
-        #lift up arm motor
-        arm_motor(600, 30)
-        #drive into trident to complete it
-        drive_base.straight(150)
-        #move backwards
-        drive_base.straight(-200)
-        #turn to home base
+        #going to next missiion
+        drive_base.straight(160)
+        #puting down arm to complete mission and puting arm up
+        arm_motor.run_time(-800, 1075)
+        drive_base.straight(-30)
+        wait(500)
+        arm_motor.run_angle(1000, 180)
+        #moving back to go to the next mission
+        drive_base.straight(-55)
+        #turnning 160 degress to turn pother way
+        drive_base.turn(130)
+        #driving twards next mission
+        drive_base.straight(900)
+        #turn twards lever
+        drive_base.turn(110)
+        #drive forward 
+        drive_base.straight(230)
+        #arm motor down
+        #tuen
         drive_base.turn(100)
-        #go back to home
+        #arm motor down
+        arm_motor.run_angle(600, -172)
+        drive_base.straight(190)
+        arm_motor.run_angle(600,172)
+        drive_base.straight(-225)
+        
+        #turn to leave the shipwreck area
+        drive_base.turn(-80)
+        #drive twards to crab cages
         drive_base.straight(500)
+        #turn to face home base
+        drive_base.turn(59)
+        #Drive to home base
+        drive_base.straight(1000)
         
     elif selected == "B":
         #drive forward
-        drive_base.straight(100) 
+        drive_base.straight(230) 
         #turn twards mission
         drive_base.turn(90)
+        arm_motor.run_angle(600, -172)
         #drive all the way to the mission
-        drive_base.straight(500)
+        drive_base.straight(250)
         #turn in front of the mission
-        drive_base.turn(-135)
+        drive_base.turn(-90)
         #complete mission
+        drive_base.straight(340)
+        drive_base.turn(90)
         drive_base.straight(150)
-        #drive away from the mission to the next
-        drive_base.straight(-150)
-        #turn twards next mission
-        drive_base.turn(45)
-        #drive twards next mission
-        drive_base.straight(300)
-        #turn into the mission
-        drive_base.turn(135)
-        #arm motor down
-        arm_motor(600, 30)
-        #move into mission with the motor down to complete the banana boat mission
-        drive_base.straight(150)
-        #arm motoer up
-        arm_motor(600,30)
-        #move away from mission
-        drive_base.straight(-150)
-        #tuen twards home and go to home
-        drive_base.turn(100)
-        drive_base.staright(500)
-
+        #arm motor up
+        arm_motor.run_angle(600,80)
+        wait(500)
+        arm_motor.run_angle(600, -75)
+        #go to the trident
+        drive_base.straight(-50)
+        #go closer to trident and complete it
+        drive_base.turn(90)
+        arm_motor.run_angle(600,60)
+        drive_base.straight(375)
+        drive_base.turn(-90)
+        drive_base.straight(375)
+        drive_base.turn(-55)
+        drive_base.straight(100)
+        arm_motor.run_angle(600,-30)
+        drive_base.straight(-120)
+        drive_base.turn(55)
+        drive_base.straight(1000)
+        drive_base.turn(90)
+        drive_base.straight(500)
+        
 
 
     elif selected == "C":
