@@ -99,7 +99,8 @@ while True:
         drive_base.turn(-55)
         drive_base.straight(100)
         arm_motor.run_angle(600,-30)
-        drive_base.straight(-120)
+        drive_base.straight(-150)
+        drive_base.straight(80)
         drive_base.turn(55)
         drive_base.straight(1000)
         drive_base.turn(90)
@@ -109,27 +110,53 @@ while True:
 
     elif selected == "C":
        # move towards green mission
-       drive_base.straight(600)
-       drive_base.turn(-90)
+       drive_base.straight(205)
+       drive_base.turn(-45)
+       drive_base.straight(305)
+       drive_base.straight(-510)
        #start getting into position for green mission 
-       drive_base.straight(30)
-       drive_base.turn(90)
-       drive_base.straight(30)
+       #drive_base.straight(40)
        #start doing green mission
-       arm_motor(600,-100)
-       drive_base.turn(175)
-       drive_base.straight(100)
-       drive_base.turn(50)
-       drive_base.turn(-15)
-       drive_base.straight(100)
-       drive_base.turn(100)
+       #arm_motor.run_angle(600,-165)
+       #drive_base.straight(-15)
+       #drive_base.turn(-100)
+       #drive_base.straight(30)
+       #drive_base.turn(50)
+       #drive_base.turn(-15)
+       #drive_base.straight(100)
+       #drive_base.turn(100)
        #go to last mission
-       drive_base.straight(70)
-       drive_base.turn(-90)
+       #drive_base.straight(70)
        #do last mission
-       arm_motor(600,100)
-
-
+       
+    elif selected == "D":
+        drive_base.straight(350)
+        drive_base.turn(-45)
+        drive_base.straight(370)
+        drive_base.turn(90)
+        drive_base.straight(240)
+        drive_base.straight(-240)
+        drive_base.turn(-90)
+        drive_base.straight(-370)
+        drive_base.turn(45)
+        drive_base.straight(-300)
+        wait(2600)
+        drive_base.straight(150)
+        drive_base.turn(45)
+        drive_base.straight(500)
+        drive_base.turn(-90)
+        drive_base.straight(380)
+        drive_base.turn(48)
+        arm_motor.run_angle(600,-155)
+        drive_base.straight(140)
+        arm_motor.run_angle(600,20)
+        wait(200)
+        arm_motor.run_angle(600,30)
+        wait(400)
+        arm_motor.run_angle(600,5)
+        wait(100)
+        arm_motor.run_angle(600,-60)
+        drive_base.straight(-160)
 
     elif selected == "X":
         break
