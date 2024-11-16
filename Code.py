@@ -88,7 +88,7 @@ while True:
         arm_motor.run_time(600, 600)
         wait(50)
         drive_base.straight(-50)
-        arm_motor.run_angle(600, -80)
+        arm_motor.run_angle(600, -70)
         #go closer to trident and complete it
         drive_base.turn(90)
         arm_motor.run_angle(600,80)
