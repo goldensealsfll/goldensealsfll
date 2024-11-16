@@ -75,7 +75,7 @@ while True:
         drive_base.straight(230) 
         #turn twards mission
         drive_base.turn(90)
-        arm_motor.run_angle(600, -172)
+        arm_motor.run_angle(600, -178)
         #drive all the way to the mission
         drive_base.straight(250)
         #turn in front of the mission
@@ -85,14 +85,13 @@ while True:
         drive_base.turn(90)
         drive_base.straight(150)
         #arm motor up
-        arm_motor.run_angle(600,80)
-        wait(500)
-        arm_motor.run_angle(600, -75)
-        #go to the trident
+        arm_motor.run_time(600, 600)
+        wait(50)
         drive_base.straight(-50)
+        arm_motor.run_angle(600, -80)
         #go closer to trident and complete it
         drive_base.turn(90)
-        arm_motor.run_angle(600,60)
+        arm_motor.run_angle(600,80)
         drive_base.straight(375)
         drive_base.turn(-90)
         drive_base.straight(375)
@@ -100,8 +99,7 @@ while True:
         drive_base.straight(100)
         arm_motor.run_angle(600,-30)
         drive_base.straight(-150)
-        arm_motor.arm_angle(600, 30)
-        wait(500)
+        arm_motor.run_angle(600, 30)
         drive_base.straight(80)
         drive_base.turn(55)
         drive_base.straight(1000)
