@@ -160,7 +160,7 @@ while True:
         wait(2000)
         arm_motor.run_angle(600,5, wait=False)
         wait(2000)
-        arm_motor.run_angle(600,-55)
+        arm_motor.run_angle(600,-53)
         drive_base.straight(-100)
         drive_base.turn(-45)
         drive_base.straight(395)
@@ -171,12 +171,14 @@ while True:
         drive_base.turn(-90)
         arm_motor.run_angle(600, -75)
         drive_base.straight(-200)
+        arm_motor.run_angle(600, 20)
         drive_base.turn(-170)
         drive_base.straight(500)
-        drive_base.turn(-25)
-        arm_motor.run_angle(600, -10)
+        drive_base.turn(-10)
+        arm_motor.run_angle(600, -25)
         drive_base.straight(150)
-        arm_motor.run_angle(600, 50)
+        arm_motor.run_angle(200, 20)
+        drive_base.straight(-100)
 
     elif selected == "X":
         break
