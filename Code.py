@@ -180,7 +180,7 @@ while True:
         drive_base.straight(-100)
         arm_motor.run_angle(200, 40)
         drive_base.straight(-50)
-        drive_base.turn(90)
+        drive_base.turn(70)
         drive_base.straight(800)
 
     elif selected == "E":
@@ -202,6 +202,8 @@ while True:
 
 
     elif selected == "F":
-        drive_base.straight(400)
+        drive_base.straight(100)
+        drive_base.turn(-65)
+        drive_base.straight(700)
         wait(500)
-        drive_base.straight(-400)
+        drive_base.straight(-900)
