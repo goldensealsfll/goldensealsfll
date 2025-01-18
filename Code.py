@@ -15,7 +15,7 @@ drive_base.use_gyro(True)
 default_speed = 600
 
 while True:
-    selected = hub_menu("A", "B", "C", "D", "X", "E") 
+    selected = hub_menu("A", "B", "C", "D", "X", "E","F") 
     drive_base.settings(straight_speed=default_speed, turn_rate=100)
     
     if selected == "A":
@@ -179,6 +179,9 @@ while True:
         arm_motor.run_angle(200, -40)
         drive_base.straight(-100)
         arm_motor.run_angle(200, 40)
+        drive_base.straight(-50)
+        drive_base.turn(90)
+        drive_base.straight(800)
 
     elif selected == "E":
         drive_base.straight(230)
@@ -196,3 +199,9 @@ while True:
         arm_motor.run_angle(600,30)
         drive_base.turn(35)
         drive_base.straight(-800)
+
+
+    elif selected == "F":
+        drive_base.straight(400)
+        wait(500)
+        drive_base.straight(-400)
