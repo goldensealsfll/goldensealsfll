@@ -57,7 +57,7 @@ while True:
         drive_base.turn(100)
         #arm motor down
         arm_motor.run_angle(600, -175)
-        drive_base.straight(190)
+        drive_base.straight(200)
         arm_motor.run_angle(600,172)
         drive_base.straight(-225)
         
@@ -114,6 +114,7 @@ while True:
 
 
     elif selected == "C":
+       drive_base.settings(straight_speed=1000, turn_rate=100)
        # move towards green mission
        drive_base.straight(205)
        drive_base.turn(-45)
@@ -135,6 +136,7 @@ while True:
        #do last mission
        
     elif selected == "D":
+        drive_base.settings(straight_speed=1000, turn_rate=100)
         drive_base.straight(350)
         drive_base.turn(-45)
         drive_base.straight(420)
@@ -148,6 +150,7 @@ while True:
         
 
     elif selected == "X":
+        drive_base.settings(straight_speed=default_speed, turn_rate=100)
         drive_base.straight(700)
         drive_base.turn(-90)
         drive_base.straight(400)
@@ -202,6 +205,7 @@ while True:
 
 
     elif selected == "F":
+        drive_base.settings(straight_speed=1000, turn_rate=100)
         drive_base.straight(100)
         drive_base.turn(-65)
         drive_base.straight(700)
