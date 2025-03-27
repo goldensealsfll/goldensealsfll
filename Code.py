@@ -57,7 +57,7 @@ while True:
         drive_base.turn(100)
         #arm motor down
         arm_motor.run_angle(600, -175)
-        drive_base.straight(200)
+        drive_base.straight(220)
         arm_motor.run_angle(600,172)
         drive_base.straight(-225)
         
