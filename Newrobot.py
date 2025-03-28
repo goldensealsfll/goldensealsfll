@@ -77,6 +77,20 @@ while True:
         right_arm_motor.run_angle(100, -50)
         wait(100)
         right_arm_motor.run_angle(100, -10)
-        
 
+    # Nochola's changes
+    elif selected == "Y":
+        drive_base.straight(320)
+        left_arm_motor.run_angle(100, 55)
+        drive_base.straight(-270)
+        left_arm_motor.run_angle(50, -41)
+       
 
+    elif selected == "Z":
+        left_arm_motor.run_angle(50, 25)  
+        wait(1500)     
+        drive_base.straight(580)
+        drive_base.turn(-10)
+        wait(500)
+        left_arm_motor.run_angle(50, 15)
+        drive_base.straight(-540)
