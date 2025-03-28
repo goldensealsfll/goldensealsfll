@@ -16,7 +16,7 @@ drive_base.use_gyro(True)
 default_speed = 300
 
 while True:
-    selected = hub_menu("A", "B", "C") 
+    selected = hub_menu("A", "B", "C", "D", "E", "F", "X") 
     drive_base.settings(straight_speed=default_speed, turn_rate=100)
 
     if selected == "A":
@@ -58,6 +58,25 @@ while True:
         drive_base.straight(250)
         drive_base.turn(-90)
 
-
+    elif selected == "D":
+        #trident mission-Natalie
+        drive_base.straight(500)
+        drive_base.turn(-45)
+        drive_base.straight(200)
+        drive_base.turn(-5)
+        right_arm_motor.run_angle(500, 10000)
+    elif selected == "E":
+        #right side krill collection
+        drive_base.straight(200)
+        drive_base.turn(-20)
+        drive_base.straight(150)
+        drive_base.turn(35)
+        drive_base.straight(150)
+    elif selected == "X":
+        #trident arm testing
+        right_arm_motor.run_angle(100, -50)
+        wait(100)
+        right_arm_motor.run_angle(100, -10)
+        
 
 
