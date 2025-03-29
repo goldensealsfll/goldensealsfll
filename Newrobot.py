@@ -86,21 +86,22 @@ while True:
         drive_base.straight(-500)
     elif selected == "Z":
         left_arm_motor.run_angle(500, 120)
-        drive_base.straight(520)
+        drive_base.straight(540)
         left_arm_motor.run_angle(500, -100)       
         drive_base.straight(-150)
         drive_base.turn(35)
         drive_base.straight(400)
         drive_base.turn(-120)
-        drive_base.straight(180)
-        right_arm_motor.run_time(-500, 500)
+        drive_base.straight(140)
+        right_arm_motor.run_time(-100, 800, wait=True)
         wait(500)
-        right_arm_motor.run_angle(500, 80)
-        drive_base.straight(-150)
+        right_arm_motor.run_angle(75, 80)
+        drive_base.straight(-120)
         left_arm_motor.run_angle(500, 100)       
-        drive_base.turn(50)
-        drive_base.straight(270)
+        drive_base.turn(52)
+        drive_base.straight(225)
+        drive_base.turn(-5)
         left_arm_motor.run_angle(500, -150)       
-
+        exit
 
         
