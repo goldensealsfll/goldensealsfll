@@ -127,11 +127,4 @@ while True:
         drive_base.turn(52)
         drive_base.straight(225)
         drive_base.turn(-5)
-        left_arm_motor.run_angle(500, -150)       
-<<<<<<< HEAD
-        break
-
-        
-=======
-        exit
->>>>>>> c9a68064678500991a50cdb4a29cb6a52a1e8e8c
+        left_arm_motor.run_angle(500, -150)
