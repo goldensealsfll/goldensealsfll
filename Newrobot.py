@@ -13,10 +13,10 @@ drive_base = DriveBase (left_wheel, right_wheel, 88, 112)
 
 drive_base.use_gyro(True)
 
-default_speed = 300
+default_speed = 350
 
 while True:
-    selected = hub_menu("A", "B", "C", "D", "E", "F", "G", "X", "Y", "Z") 
+    selected = hub_menu("A", "B", "C", "D", "E", "F", "G", "H", "X", "Y", "Z") 
     drive_base.settings(straight_speed=default_speed, turn_rate=100)
 
     if selected == "A":
@@ -116,7 +116,7 @@ while True:
         left_arm_motor.run_angle(500, -100)       
         drive_base.straight(-150)
         drive_base.turn(35)
-        drive_base.straight(400)
+        drive_base.straight(390)
         drive_base.turn(-120)
         drive_base.straight(140)
         right_arm_motor.run_time(-100, 800, wait=True)
@@ -128,3 +128,15 @@ while True:
         drive_base.straight(225)
         drive_base.turn(-5)
         left_arm_motor.run_angle(500, -150)
+        break
+
+    elif selected == "H":
+        #Trident and boat run
+        #drive_base.straight(350)
+        #drive_base.turn(90)
+        #drive_base.straight(525)
+        #drive_base.turn(-45)
+        drive_base.straight(550)
+        drive_base.turn(-50)
+        drive_base.straight(150)
+        
