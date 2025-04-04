@@ -99,10 +99,21 @@ while True:
         right_arm_motor.run_angle(200, 100)
         drive_base.straight(-100)
     elif selected == "X":
-        #trident arm testing
-        right_arm_motor.run_angle(100, -50)
-        wait(100)
-        right_arm_motor.run_angle(100, -10)
+       drive_base.turn(-2.95)
+       drive_base.straight(500) 
+       left_arm_motor.run_angle(100, 50, wait=False)     
+       drive_base.straight(410)
+       left_arm_motor.run_time(-50, 3000)
+       left_arm_motor.run_angle(100, -25, wait=False)     
+       drive_base.straight(-200)
+       drive_base.turn(-70)
+       right_arm_motor.run_angle(100, -70, wait=False)
+       drive_base.straight(510)
+       right_arm_motor.run_time(100, 1000, wait=True)
+       drive_base.straight(-50)
+       drive_base.turn(55)
+       drive_base.straight(-100)
+      
 
     # Nochola's changes
     elif selected == "Y":
@@ -116,10 +127,10 @@ while True:
         left_arm_motor.run_angle(500, -100)       
         drive_base.straight(-150)
         drive_base.turn(35)
-        drive_base.straight(390)
+        drive_base.straight(375)
         drive_base.turn(-120)
-        drive_base.straight(140)
-        right_arm_motor.run_time(-100, 800, wait=True)
+        drive_base.straight(120)
+        right_arm_motor.run_time(-50, 1000, wait=True)
         wait(500)
         right_arm_motor.run_angle(75, 80)
         drive_base.straight(-120)
@@ -128,15 +139,24 @@ while True:
         drive_base.straight(225)
         drive_base.turn(-5)
         left_arm_motor.run_angle(500, -150)
+        left_arm_motor.run_angle(500, 150)
+        drive_base.straight(-200)
+        drive_base.turn(50)
+        drive_base.straight(-800)
         break
 
     elif selected == "H":
         #Trident and boat run
-        #drive_base.straight(350)
-        #drive_base.turn(90)
-        #drive_base.straight(525)
-        #drive_base.turn(-45)
-        drive_base.straight(550)
-        drive_base.turn(-50)
-        drive_base.straight(150)
+        drive_base.straight(350)
+        drive_base.turn(90)
+        drive_base.straight(667)
+        drive_base.turn(-45)
+        drive_base.straight(5)
+        #left_arm_motor.run_angle(500, 135)
+        left_arm_motor.run_time(115, 1500, wait=True)
+        wait(200)
+        drive_base.straight(-100)
+        left_arm_motor.run_angle(500, -30)
+        #drive_base.turn(-50)
+        #drive_base.straight(150)
         
