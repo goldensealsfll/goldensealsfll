@@ -60,13 +60,14 @@ while True:
 
     elif selected == "D":
         #trident mission-Natalie
-        drive_base.straight(500)
+        drive_base.straight(530)
         drive_base.turn(-45)
         drive_base.straight(200)
         drive_base.turn(-5)
         right_arm_motor.run_angle(500, 10000)
     elif selected == "E":
         #right side krill collection
+        #krill collection started
         drive_base.straight(200)
         drive_base.turn(-20)
         drive_base.straight(150)
@@ -77,27 +78,50 @@ while True:
         drive_base.turn(45)
         drive_base.straight(150)
         drive_base.straight(40)
-        drive_base.straight(-125)
-        drive_base.turn(60)
+        drive_base.straight(-130)
+        #krill collection done
+        #going to other side
+        drive_base.turn(-115)
+        drive_base.straight(300)
+        drive_base.turn(-7)
+        #hit anglerfish
+        drive_base.straight(319)
+        drive_base.turn(58)
+        #grab seabed sample
+        drive_base.straight(150)
+        drive_base.straight(-50)
+        #start other side collection
+        drive_base.turn(-20)
+        drive_base.straight(150)
+        drive_base.turn(-53)
+        #grabs water sample and 1 coral sample
+        drive_base.straight(400)
         drive_base.straight(100)
-        drive_base.straight(-100)
-        drive_base.turn(-45)
-        drive_base.straight(-100)
+        drive_base.straight(-300)
+        #grabs 1 krill
+        drive_base.turn(20)
         drive_base.straight(100)
-        drive_base.turn(-105)
-        drive_base.straight(500)
+        #grabs 1 coral sample
+        drive_base.turn(-90)
+        drive_base.straight(200)
+        #goes home left
+        drive_base.turn(10)
+        drive_base.straight(400)
     elif selected == "F":
         #three coral buds mission-complete(can be used on both sides)
         drive_base.straight(100)
         drive_base.straight(-100)
     elif selected == "G":
         #krill mission-not complete
-        drive_base.straight(700)
-        drive_base.turn(40)
-        drive_base.straight(167)
-        right_arm_motor.run_angle(20, -50)
-        right_arm_motor.run_angle(200, 100)
+        drive_base.straight(300)
+        drive_base.turn(-50)
+        drive_base.straight(240)
         drive_base.straight(-100)
+        drive_base.turn(90)
+        right_arm_motor.run_angle(200, -50)
+        left_arm_motor.run_angle(200, 100)
+        #right_arm_motor.run_angle(200, 100)
+        #drive_base.straight(-100)
     elif selected == "X":
         #trident arm testing
         right_arm_motor.run_angle(100, -50)
