@@ -66,38 +66,49 @@ while True:
         drive_base.turn(-5)
         right_arm_motor.run_angle(500, 10000)
     elif selected == "E":
-        #right side krill collection
-        drive_base.straight(200)
-        drive_base.turn(-20)
-        drive_base.straight(150)
-        drive_base.turn(30)
-        drive_base.straight(150)
-        drive_base.turn(-22)
-        drive_base.straight(100)
-        drive_base.turn(45)
-        drive_base.straight(150)
-        drive_base.straight(40)
-        drive_base.straight(-125)
-        drive_base.turn(60)
-        drive_base.straight(100)
-        drive_base.straight(-100)
-        drive_base.turn(-45)
-        drive_base.straight(-100)
-        drive_base.straight(100)
-        drive_base.turn(-105)
-        drive_base.straight(500)
+       drive_base.settings(straight_speed=250, turn_rate=100)
+       drive_base.turn(-5)
+       drive_base.straight(650)
+       drive_base.turn(45)
+       drive_base.straight(150)
+       drive_base.straight(-180)
+       drive_base.turn(-120)
+       drive_base.settings(straight_speed=500, turn_rate=100)
+       drive_base.straight(200)
+       drive_base.turn(-9)
+       drive_base.straight(500)
+       drive_base.turn(38)
+       drive_base.straight(-100)
+       drive_base.turn(23)
+       drive_base.straight(120)
+       drive_base.straight(-120)
+       drive_base.turn(-52)
+       drive_base.straight(550)
+       drive_base.turn(-90)
+       drive_base.straight(500)
+
     elif selected == "F":
-        #three coral buds mission-complete(can be used on both sides)
-        drive_base.straight(100)
-        drive_base.straight(-100)
+       right_arm_motor.run_time(-50, 1000,wait=True)
+##############################################################
     elif selected == "G":
-        #krill mission-not complete
-        drive_base.straight(700)
-        drive_base.turn(40)
-        drive_base.straight(167)
-        right_arm_motor.run_angle(20, -50)
-        right_arm_motor.run_angle(200, 100)
-        drive_base.straight(-100)
+       drive_base.straight(300)
+       drive_base.turn(-90)
+       drive_base.straight(290)
+       right_arm_motor.run_angle(100, -80, wait=False)
+       drive_base.turn(-90)
+       drive_base.straight(80)
+       right_arm_motor.run_angle(100, 80, wait=True)
+       drive_base.straight(-220)
+       drive_base.turn(-45)
+       drive_base.straight(-25)
+       drive_base.straight(150)
+       drive_base.turn(-105)
+       right_arm_motor.run_angle(500, -80, wait=False)      
+       drive_base.straight(550)
+       drive_base.turn(25)
+
+
+
     elif selected == "X":
        drive_base.turn(-2.95)
        drive_base.straight(500) 
@@ -115,7 +126,7 @@ while True:
        drive_base.straight(-100)
       
 
-    # Nochola's changes
+########################################################
     elif selected == "Y":
         left_arm_motor.run_angle(500, 100, wait=False)
         drive_base.straight(420)
@@ -144,7 +155,7 @@ while True:
         drive_base.turn(50)
         drive_base.straight(-800)
         break
-
+###########################################################
     elif selected == "H":
         #Trident and boat run
         drive_base.straight(350)
@@ -153,10 +164,10 @@ while True:
         drive_base.turn(-45)
         drive_base.straight(5)
         #left_arm_motor.run_angle(500, 135)
-        left_arm_motor.run_time(115, 1500, wait=True)
+        left_arm_motor.run_time(115, 950, wait=True)
         wait(200)
         drive_base.straight(-100)
         left_arm_motor.run_angle(500, -30)
-        #drive_base.turn(-50)
+        drive_base.turn(-50)
         #drive_base.straight(150)
         
