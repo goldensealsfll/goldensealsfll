@@ -98,15 +98,15 @@ while True:
 
     elif selected == "F":
        #run 5
-       drive_base.straight(430)
+       drive_base.straight(420)
        drive_base.turn(-48)
-       drive_base.straight(180)
+       drive_base.straight(190)
        drive_base.straight(-50)
        drive_base.turn(30)
        drive_base.straight(85)
-       drive_base.turn(54)
+       drive_base.turn(56)
        right_arm_motor.run_angle(200, -130, wait=False)
-       drive_base.straight(360)
+       drive_base.straight(365)
        left_arm_motor.run_angle(100, -50, wait=True)
        drive_base.straight(-60)
        drive_base.turn(30)
