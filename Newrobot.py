@@ -104,10 +104,18 @@ while True:
        drive_base.straight(-50)
        drive_base.turn(30)
        drive_base.straight(85)
-       drive_base.turn(55)
+       drive_base.turn(54)
        right_arm_motor.run_angle(200, -130, wait=False)
        drive_base.straight(360)
-       left_arm_motor.run_angle(100, -50)
+       left_arm_motor.run_angle(100, -50, wait=True)
+       drive_base.straight(-60)
+       drive_base.turn(30)
+       drive_base.straight(20)
+       right_arm_motor.run_angle(500, 130)
+       drive_base.straight(-180)
+       drive_base.turn(-70)
+       drive_base.straight(-800)
+
        
 
 
