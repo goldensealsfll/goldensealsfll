@@ -65,7 +65,15 @@ while True:
         drive_base.straight(200)
         drive_base.turn(-5)
         right_arm_motor.run_angle(500, 10000)
+##################################################################################
+##################################################################################
+##################################################################################
+##################################################################################
+##################################################################################
+##################################################################################
+        #Do not touch
     elif selected == "E":
+       #colection mission
        drive_base.settings(straight_speed=250, turn_rate=100)
        drive_base.turn(-5)
        drive_base.straight(650)
@@ -86,10 +94,23 @@ while True:
        drive_base.straight(550)
        drive_base.turn(-90)
        drive_base.straight(500)
+       drive_base.settings(straight_speed=default_speed, turn_rate=100)
 
     elif selected == "F":
-       right_arm_motor.run_time(-50, 1000,wait=True)
-##############################################################
+       #run 5
+       drive_base.straight(430)
+       drive_base.turn(-48)
+       drive_base.straight(180)
+       drive_base.straight(-50)
+       drive_base.turn(30)
+       drive_base.straight(85)
+       drive_base.turn(55)
+       right_arm_motor.run_angle(200, -130, wait=False)
+       drive_base.straight(360)
+       left_arm_motor.run_angle(100, -50)
+       
+
+
     elif selected == "G":
        drive_base.straight(300)
        drive_base.turn(-90)
@@ -107,9 +128,8 @@ while True:
        drive_base.straight(550)
        drive_base.turn(25)
 
-
-
     elif selected == "X":
+       #sonar discovery, submercible, octopus in ring
        drive_base.turn(-2.95)
        drive_base.straight(500) 
        left_arm_motor.run_angle(100, 50, wait=False)     
@@ -124,15 +144,14 @@ while True:
        drive_base.straight(-50)
        drive_base.turn(55)
        drive_base.straight(-100)
-      
-
-########################################################
     elif selected == "Y":
+        #coral tree pick up
         left_arm_motor.run_angle(500, 100, wait=False)
         drive_base.straight(420)
         left_arm_motor.run_angle(500, -80)
         drive_base.straight(-500)
     elif selected == "Z":
+        #hanging coral tree, coral buds, picking up scuba diver, and shark
         left_arm_motor.run_angle(500, 120)
         drive_base.straight(540)
         left_arm_motor.run_angle(500, -100)       
@@ -155,7 +174,12 @@ while True:
         drive_base.turn(50)
         drive_base.straight(-800)
         break
-###########################################################
+##################################################################################
+##################################################################################
+##################################################################################
+##################################################################################
+##################################################################################
+##################################################################################
     elif selected == "H":
         #Trident and boat run
         drive_base.straight(350)
