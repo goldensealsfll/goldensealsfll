@@ -94,7 +94,7 @@ while True:
 
     elif selected == "6":
        #sonar discovery, submercible, octopus in ring
-       drive_base.turn(-2.95)
+       drive_base.turn(-5.5)
        drive_base.straight(500) 
        left_arm_motor.run_angle(100, 50, wait=False)     
        drive_base.straight(410)
@@ -103,7 +103,7 @@ while True:
        drive_base.straight(-200)
        drive_base.turn(-70)
        right_arm_motor.run_angle(100, -70, wait=False)
-       drive_base.straight(520)
+       drive_base.straight(535)
        right_arm_motor.run_time(100, 1000, wait=True)
        drive_base.straight(-50)
        drive_base.turn(55)
