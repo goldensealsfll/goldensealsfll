@@ -16,28 +16,28 @@ drive_base.use_gyro(True)
 default_speed = 350
 
 while True:
-    selected = hub_menu("1", "2", "3", "4", "5", "6") 
+    selected = hub_menu("1", "2", "3", "4", "5", "6", "7") 
     drive_base.settings(straight_speed=default_speed, turn_rate=100)
 
     if selected == "4":
-        right_arm_motor.run_angle(100, -65)
+        right_arm_motor.run_angle(100, -120)
         drive_base.straight(330)
         drive_base.turn(35)
         drive_base.straight(520)
         drive_base.turn(-30)
-        drive_base.straight(60)
-        right_arm_motor.run_angle(100, 90)
-        right_arm_motor.run_angle(100, -30, wait=True)
+        drive_base.straight(50)
+        right_arm_motor.run_angle(100, 100)
+        right_arm_motor.run_angle(100, -40, wait=True)
         drive_base.straight(-80)
         drive_base.turn(40)
         drive_base.straight(-220)
         drive_base.turn(45)
         drive_base.straight(-50)
-        right_arm_motor.run_angle(100, 35)
+        right_arm_motor.run_angle(100, 45)
         drive_base.straight(80)
         right_arm_motor.run_angle(100, -120, wait=True)
-        drive_base.straight(140)
-        drive_base.straight(-250)
+        drive_base.straight(135)
+        drive_base.straight(-265)
         right_arm_motor.run_angle(100, -30, wait=False)
         drive_base.turn(40)
         drive_base.straight(500)
@@ -45,14 +45,14 @@ while True:
         drive_base.straight(170)
         drive_base.turn(-15)
         ##
-        right_arm_motor.run_angle(100, 80)
+        right_arm_motor.run_angle(140, 80)
         drive_base.settings(straight_speed=1000, turn_rate=100)
-        drive_base.straight(-160)
+        drive_base.straight(-100)
         drive_base.settings(straight_speed=default_speed, turn_rate=100)
         drive_base.turn(50)
         drive_base.straight(800)
-        drive_base.turn(45)
-        drive_base.straight(400)
+        drive_base.turn(40)
+        drive_base.straight(300)
     
     elif selected == "1":
        #colection mission
@@ -65,8 +65,8 @@ while True:
        drive_base.turn(-75)
        drive_base.settings(straight_speed=default_speed, turn_rate=100)
        drive_base.straight(300)
-       drive_base.turn(-15)
-       right_arm_motor.run_angle(800, -85, wait=False)
+       drive_base.turn(-16)
+       right_arm_motor.run_angle(800, -95, wait=False)
        drive_base.straight(330)
        drive_base.turn(30)
        drive_base.straight(250)
@@ -142,4 +142,9 @@ while True:
         drive_base.turn(50)
         drive_base.straight(-800)
         break
+    elif selected == "7":
+        drive_base.settings(straight_speed=100, turn_rate=100)
+        drive_base.straight(150)
+        drive_base.straight(-150)
+        drive_base.settings(straight_speed=default_speed, turn_rate=100)
         
