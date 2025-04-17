@@ -25,8 +25,8 @@ while True:
         drive_base.turn(35)
         drive_base.straight(520)
         drive_base.turn(-30)
-        drive_base.straight(55)
-        right_arm_motor.run_time(200, 2500, wait=False)
+        drive_base.straight(40)
+        right_arm_motor.run_time(200, 3500, wait=False)
         drive_base.straight(30)
         right_arm_motor.run_angle(100, -40, wait=True)
         drive_base.straight(-80)
@@ -75,13 +75,13 @@ while True:
        drive_base.straight(225)
        right_arm_motor.run_angle(800, -25)
        #trurn between coral
-       drive_base.turn(-28)
+       drive_base.turn(-26)
        #trurn between coral
        drive_base.straight(180)
        right_arm_motor.run_angle(500, 30)
        drive_base.straight(160)
        drive_base.turn(-55)
-       right_arm_motor.run_angle(500, 30)
+       right_arm_motor.run_angle(500, -30)
        drive_base.straight(700)
        drive_base.settings(straight_speed=default_speed, turn_rate=100)
        break
