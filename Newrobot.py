@@ -72,7 +72,9 @@ while True:
        drive_base.straight(330)
        drive_base.turn(30)
        drive_base.straight(250)
+       #trurn between coral
        drive_base.turn(-40)
+       #trurn between coral
        drive_base.straight(180)
        right_arm_motor.run_angle(500, 30)
        drive_base.straight(200)
@@ -109,7 +111,7 @@ while True:
        drive_base.straight(410)
        left_arm_motor.run_time(-50, 3000)
        left_arm_motor.run_angle(100, -25, wait=False)     
-       drive_base.straight(-200)
+       drive_base.straight(-150)
        drive_base.turn(-70)
        right_arm_motor.run_angle(100, -70, wait=False)
        drive_base.straight(535)
@@ -120,8 +122,9 @@ while True:
     elif selected == "2":
         #coral tree pick up
         drive_base.turn(-1)
-        left_arm_motor.run_angle(500, 100, wait=False)
-        drive_base.straight(420)
+        #11:19
+        left_arm_motor.run_angle(500, 120, wait=False)
+        drive_base.straight(425)
         left_arm_motor.run_angle(500, -80)
         drive_base.straight(-500)
     elif selected == "3":
