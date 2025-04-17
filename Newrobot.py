@@ -56,6 +56,7 @@ while True:
     
     elif selected == "1":
        #colection mission
+       drive_base.settings(straight_speed=250, turn_rate=100)
        right_arm_motor.run_angle(800, -280, wait=False)
        drive_base.straight(400)
        right_arm_motor.run_angle(800, 170, wait=False)
@@ -63,17 +64,21 @@ while True:
        right_arm_motor.run_angle(800, -100, wait=False) 
        drive_base.settings(straight_speed=200, turn_rate=60)     
        drive_base.turn(-75)
-       drive_base.settings(straight_speed=default_speed, turn_rate=100)
+       drive_base.settings(straight_speed=250, turn_rate=100)
        drive_base.straight(300)
        drive_base.turn(-16)
-       right_arm_motor.run_angle(800, -95, wait=False)
+       right_arm_motor.run_angle(800, -90, wait=False)
        drive_base.straight(330)
        drive_base.turn(30)
        drive_base.straight(250)
-       drive_base.turn(-45)
-       drive_base.straight(400)
+       drive_base.turn(-40)
+       drive_base.straight(180)
+       right_arm_motor.run_angle(500, 30)
+       drive_base.straight(200)
        drive_base.turn(-55)
+       right_arm_motor.run_angle(500, 30)
        drive_base.straight(700)
+       drive_base.settings(straight_speed=default_speed, turn_rate=100)
        break
     elif selected == "5":
        #run 5
