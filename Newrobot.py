@@ -19,14 +19,15 @@ while True:
     selected = hub_menu("1", "2", "3", "4", "5", "6", "7") 
     drive_base.settings(straight_speed=default_speed, turn_rate=100)
 
-    if selected == "4":
-        right_arm_motor.run_angle(100, -120)
+    if selected == "5":
+        right_arm_motor.run_angle(100, -110)
         drive_base.straight(330)
         drive_base.turn(35)
         drive_base.straight(520)
         drive_base.turn(-30)
-        drive_base.straight(50)
-        right_arm_motor.run_angle(100, 100)
+        drive_base.straight(55)
+        right_arm_motor.run_angle(200, 120, wait=False)
+        drive_base.straight(15)
         right_arm_motor.run_angle(100, -40, wait=True)
         drive_base.straight(-80)
         drive_base.turn(40)
@@ -34,7 +35,7 @@ while True:
         drive_base.turn(45)
         drive_base.straight(-50)
         right_arm_motor.run_angle(100, 45)
-        drive_base.straight(80)
+        drive_base.straight(90)
         right_arm_motor.run_angle(100, -120, wait=True)
         drive_base.straight(135)
         drive_base.straight(-265)
@@ -80,7 +81,7 @@ while True:
        drive_base.straight(700)
        drive_base.settings(straight_speed=default_speed, turn_rate=100)
        break
-    elif selected == "5":
+    elif selected == "6":
        #run 5
        drive_base.straight(420)
        drive_base.turn(-48)
@@ -100,7 +101,7 @@ while True:
        drive_base.turn(-70)
        drive_base.straight(-800)
 
-    elif selected == "6":
+    elif selected == "7":
        #sonar discovery, submercible, octopus in ring
        drive_base.turn(-5.5)
        drive_base.straight(500) 
@@ -147,7 +148,7 @@ while True:
         drive_base.turn(50)
         drive_base.straight(-800)
         break
-    elif selected == "7":
+    elif selected == "4":
         drive_base.settings(straight_speed=100, turn_rate=100)
         drive_base.straight(150)
         drive_base.straight(-150)
