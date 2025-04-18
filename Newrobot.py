@@ -35,13 +35,13 @@ while True:
         drive_base.turn(45)
         drive_base.straight(-50)
         right_arm_motor.run_angle(100, 70)
-        drive_base.straight(100)
+        drive_base.straight(110)
         right_arm_motor.run_angle(500, -120)
         drive_base.straight(135)
         drive_base.straight(-265)
         right_arm_motor.run_angle(100, -30, wait=False)
         drive_base.turn(40)
-        drive_base.straight(500)
+        drive_base.straight(480)
         drive_base.turn(-80)
         drive_base.straight(170)
         drive_base.turn(-15)
@@ -77,9 +77,7 @@ while True:
        #trurn between coral
        drive_base.turn(-22)
        #trurn between coral
-       drive_base.straight(180)
-       right_arm_motor.run_angle(500, 30)
-       drive_base.straight(160)
+       drive_base.straight(340)
        drive_base.turn(-60)
        right_arm_motor.run_angle(500, -50)
        drive_base.straight(700)
@@ -87,6 +85,7 @@ while True:
        break
     elif selected == "6":
        #run 5
+       drive_base.settings(straight_speed=300, turn_rate=80)
        drive_base.straight(420)
        drive_base.turn(-48)
        drive_base.straight(195)
@@ -96,7 +95,7 @@ while True:
        drive_base.turn(56)
        right_arm_motor.run_angle(200, -130, wait=False)
        drive_base.straight(385)
-       left_arm_motor.run_angle(100, -50, wait=True)
+       left_arm_motor.run_angle(50, -50, wait=True)
        drive_base.straight(-60)
        drive_base.turn(30)
        drive_base.straight(20)
@@ -104,6 +103,7 @@ while True:
        drive_base.straight(-180)
        drive_base.turn(-70)
        drive_base.straight(-800)
+       drive_base.settings(straight_speed=default_speed, turn_rate=100)
 
     elif selected == "7":
        #sonar discovery, submercible, octopus in ring
@@ -116,11 +116,11 @@ while True:
        drive_base.straight(-150)
        drive_base.turn(-70)
        right_arm_motor.run_angle(500, 300, wait=False)
-       drive_base.straight(475)
+       drive_base.straight(470)
        drive_base.turn(25)
        right_arm_motor.run_time(-100, 2000, wait=True)
        right_arm_motor.run_angle(500, 100, wait=False)
-       drive_base.straight(-70)
+       drive_base.straight(-80)
        drive_base.turn(55)
        drive_base.straight(-160)
     elif selected == "2":
@@ -140,14 +140,13 @@ while True:
         drive_base.turn(35)
         drive_base.straight(375)
         drive_base.turn(-120)
-        drive_base.straight(130)
-        right_arm_motor.run_time(100, 1000, wait=True)
-        wait(500)
+        drive_base.straight(120)
+        right_arm_motor.run_time(200, 1500, wait=True)
         right_arm_motor.run_angle(75, -120)
         drive_base.straight(-120)
         left_arm_motor.run_angle(500, 120)       
         drive_base.turn(52)
-        drive_base.straight(215)
+        drive_base.straight(230)
         drive_base.turn(-8)
         left_arm_motor.run_angle(500, -150)
         left_arm_motor.run_angle(500, 150)
@@ -157,7 +156,7 @@ while True:
         break
     elif selected == "4":
         drive_base.settings(straight_speed=100, turn_rate=100)
-        drive_base.straight(150)
-        drive_base.straight(-150)
+        drive_base.straight(100)
+        drive_base.straight(-200)
         drive_base.settings(straight_speed=default_speed, turn_rate=100)
         
