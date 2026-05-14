@@ -1,4 +1,4 @@
-### HI there 👋
+### First LEGO League Robotics Source Code
 
 <!--
 **goldensealsfll/goldensealsfll** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
