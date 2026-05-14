@@ -1,4 +1,4 @@
-### First LEGO League Robotics Source Code
+### FIRST LEGO League Robotics Source Code designed to help FLL teams with the introduction to Python.
 
 <!--
 **goldensealsfll/goldensealsfll** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
